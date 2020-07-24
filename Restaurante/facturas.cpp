@@ -114,7 +114,7 @@ void Facturas::on_pushButton_cancelar_clicked()
     srand(static_cast<unsigned int>(time(0)));
     int ran=0+rand() % (Lista1.size());
 
-    qDebug() << Lista1.size() << ran;
+    //qDebug() << Lista1.size() << ran;
 
     QString cajero = Lista1[ran];
     QString a = "2020-07-26";
@@ -166,7 +166,7 @@ void Facturas::on_pushButton_cancelar_clicked()
             }
         }
     }
-    qDebug() << Listaf << cod_fact << cod_lineas;
+    //qDebug() << Listaf << cod_fact << cod_lineas;
     QSqlQuery querylineas;
 
         //viendo Pedidos
@@ -201,7 +201,7 @@ void Facturas::on_pushButton_cancelar_clicked()
         //vista de categorias e ingreso de pedidos
         QSqlQuery selectc,querype;
         QStringList Listac,Listan,Listaprecio;
-        selectc.prepare("SELECT * FROM Categorias c INNER JOIN Producto p ON c.cod_catg = p.cod_catg INNER JOIN [192.168.0.100].Restaurante.dbo.Producto ipp ON p.enlace = ipp.enlace");
+        selectc.prepare("SELECT * FROM Categorias c INNER JOIN Producto p ON c.cod_catg = p.cod_catg INNER JOIN [192.168.0.104].Restaurante.dbo.Producto ipp ON p.enlace = ipp.enlace");
         selectc.exec();
         while(selectc.next()){
             Listac << selectc.value(0).toByteArray().constData();
@@ -234,9 +234,18 @@ void Facturas::on_pushButton_cancelar_clicked()
                 else
                     qDebug() << "Datos no ingresados a Pedidos";
 
-                encontro = false;
-                cod_pro++;
-                cod_lineas++;
+                encontro = false;//inicializa si encontro algo
+                cod_pro++;//optimizar
+                for(int l = 0 ; l<Listap.size(); l++){
+                    if(cod_pro == Listap[l]){
+                        cod_pro++;
+                    }
+                }
+                for(int l = 0 ; l<Listaf.size(); l++){
+                    if(cod_lineas == Listaf[l]){
+                        cod_lineas++;//optimizar
+                    }
+                }
 
             }
 
@@ -270,6 +279,7 @@ void Facturas::on_pushButton_cancelar_clicked()
 
         //eliminando mesa e insertando
         if(estamesa){
+            QSqlDatabase::database().commit();
             qDebug() <<"eliminando mesa e insertando";
             querymesa.prepare("DELETE Mesas WHERE cod_mesa ="+mesa_);
             querymesa.exec();

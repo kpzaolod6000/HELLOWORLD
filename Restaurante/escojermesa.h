@@ -48,6 +48,7 @@ private:
     Ui::EscojerMesa *ui;
     RegistrarMesa* ventana;
     Mesas* mesas;
+    Mesas* queryenvio;
 };
 
 #endif // ESCOJERMESA_H

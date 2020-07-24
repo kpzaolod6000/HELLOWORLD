@@ -10,6 +10,7 @@
 #include <QMessageBox>
 #include <QStringList>
 #include "registrarcliente.h"
+#include "mesas.h"
 
 namespace Ui {
 class RegistrarMesa;
@@ -45,9 +46,18 @@ private slots:
 
     void esconder();
 
+    void on_pushButton_platos_clicked();
+
+    void on_pushButton_entrada_clicked();
+
+    void on_pushButton_segund_clicked();
+
+    void on_pushButton_postres_clicked();
+
 private:
     Ui::RegistrarMesa *ui;
     RegistrarCliente* ventana;
+    Mesas* mesas;
 
 };
 

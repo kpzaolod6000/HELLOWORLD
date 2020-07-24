@@ -44,27 +44,9 @@ void MainWindow::on_pushButton_login_clicked()
 
 void MainWindow::on_pushButton_clicked()
 {
-    QSqlQuery query;
-    query.prepare("SELECT * FROM Persona");
-    if(query.exec()){
-        qDebug()<<"CONSULTA CORRECTA";
-        int fila = 0;
-        ui->tableWidget->setColumnCount(7);
-        while(query.next()){
-            ui->tableWidget->insertRow(fila);
-            ui->tableWidget->setItem(fila,0,new QTableWidgetItem(query.value(0).toString()));
-            ui->tableWidget->setItem(fila,1,new QTableWidgetItem(query.value(1).toString()));
-            ui->tableWidget->setItem(fila,2,new QTableWidgetItem(query.value(2).toString()));
-            ui->tableWidget->setItem(fila,3,new QTableWidgetItem(query.value(4).toString()));
-            ui->tableWidget->setItem(fila,4,new QTableWidgetItem(query.value(3).toString()));
-            ui->tableWidget->setItem(fila,5,new QTableWidgetItem(query.value(6).toString()));
-            ui->tableWidget->setItem(fila,6,new QTableWidgetItem(query.value(8).toString()));
-            //ui->tableWidget_tables->setRowHeight(fila,50);
-            fila++;
+}
 
-        }
-
-    }
-
-
+void MainWindow::on_pushButton_salir_clicked()
+{
+    this->close();
 }

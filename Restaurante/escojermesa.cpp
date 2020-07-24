@@ -50,9 +50,21 @@ void EscojerMesa::on_pushButton_mesa1_clicked()
         msg.setText("Mesa Ocupada");
         msg.exec();
     }else{
-        ventana = new RegistrarMesa();
-        this->setVisible(false);
-        ventana->setVisible(true);
+        char* mozos = mesas->getmozos();
+        QString mo = mozos;
+        qDebug() << a;
+
+        QSqlDatabase::database().transaction();//SE PUDO LA TRANSACTION
+           QSqlQuery querynew;
+           querynew.exec("SET TRANSACTION ISOLATION LEVEL READ COMMITTED; UPDATE Mesas SET cod_moz ='"+mo+"' WHERE cod_mesa="+a);
+           if(querynew.exec()){
+               qDebug() << "RESERVANDO MESA: " << 6 <<"...";
+           }else{
+               qDebug() << "ERROR EN LA RESERVA";
+        }
+
+       ventana = new RegistrarMesa();
+       ventana->setVisible(true);
     }
 }
 void EscojerMesa::on_pushButton_mesa2_clicked()
@@ -93,9 +105,21 @@ void EscojerMesa::on_pushButton_mesa2_clicked()
         msg.setText("Mesa Ocupada");
         msg.exec();
     }else{
-        ventana = new RegistrarMesa();
-        this->setVisible(false);
-        ventana->setVisible(true);
+        char* mozos = mesas->getmozos();
+        QString mo = mozos;
+        qDebug() << a;
+
+        QSqlDatabase::database().transaction();//SE PUDO LA TRANSACTION
+           QSqlQuery querynew;
+           querynew.exec("SET TRANSACTION ISOLATION LEVEL READ COMMITTED; UPDATE Mesas SET cod_moz ='"+mo+"' WHERE cod_mesa="+a);
+           if(querynew.exec()){
+               qDebug() << "RESERVANDO MESA: " << 6 <<"...";
+           }else{
+               qDebug() << "ERROR EN LA RESERVA";
+        }
+
+       ventana = new RegistrarMesa();
+       ventana->setVisible(true);
     }
 
 }
@@ -137,9 +161,21 @@ void EscojerMesa::on_pushButton_mesa3_clicked()
         msg.setText("Mesa Ocupada");
         msg.exec();
     }else{
-        ventana = new RegistrarMesa();
-        this->setVisible(false);
-        ventana->setVisible(true);
+        char* mozos = mesas->getmozos();
+        QString mo = mozos;
+        qDebug() << a;
+
+        QSqlDatabase::database().transaction();//SE PUDO LA TRANSACTION
+           QSqlQuery querynew;
+           querynew.exec("SET TRANSACTION ISOLATION LEVEL READ COMMITTED; UPDATE Mesas SET cod_moz ='"+mo+"' WHERE cod_mesa="+a);
+           if(querynew.exec()){
+               qDebug() << "RESERVANDO MESA: " << 6 <<"...";
+           }else{
+               qDebug() << "ERROR EN LA RESERVA";
+        }
+
+       ventana = new RegistrarMesa();
+       ventana->setVisible(true);
     }
 
 }
@@ -183,9 +219,21 @@ void EscojerMesa::on_pushButton_mesa4_clicked()
         msg.setText("Mesa Ocupada");
         msg.exec();
     }else{
-        ventana = new RegistrarMesa();
-        this->setVisible(false);
-        ventana->setVisible(true);
+        char* mozos = mesas->getmozos();
+        QString mo = mozos;
+        qDebug() << a;
+
+        QSqlDatabase::database().transaction();//SE PUDO LA TRANSACTION
+           QSqlQuery querynew;
+           querynew.exec("SET TRANSACTION ISOLATION LEVEL READ COMMITTED; UPDATE Mesas SET cod_moz ='"+mo+"' WHERE cod_mesa="+a);
+           if(querynew.exec()){
+               qDebug() << "RESERVANDO MESA: " << 6 <<"...";
+           }else{
+               qDebug() << "ERROR EN LA RESERVA";
+        }
+
+       ventana = new RegistrarMesa();
+       ventana->setVisible(true);
     }
 
 }
@@ -228,8 +276,20 @@ void EscojerMesa::on_pushButton_mesa5_clicked()
         msg.setText("Mesa Ocupada");
         msg.exec();
     }else{
+        char* mozos = mesas->getmozos();
+        QString mo = mozos;
+        qDebug() << a;
+
+        QSqlDatabase::database().transaction();//SE PUDO LA TRANSACTION
+           QSqlQuery querynew;
+           querynew.exec("SET TRANSACTION ISOLATION LEVEL READ COMMITTED; UPDATE Mesas SET cod_moz ='"+mo+"' WHERE cod_mesa="+a);
+           if(querynew.exec()){
+               qDebug() << "RESERVANDO MESA: " << 6 <<"...";
+           }else{
+               qDebug() << "ERROR EN LA RESERVA";
+        }
+
         ventana = new RegistrarMesa();
-        this->setVisible(false);
         ventana->setVisible(true);
     }
 }
@@ -270,6 +330,26 @@ void EscojerMesa::on_pushButton_mesa6_clicked()
         msg.setText("Mesa Ocupada");
         msg.exec();
     }else{
+        char* mozos = mesas->getmozos();
+        QString mo = mozos;
+        qDebug() << a;
+
+        QSqlDatabase::database().transaction();//SE PUDO LA TRANSACTION
+           QSqlQuery querynew;
+           querynew.exec("SET TRANSACTION ISOLATION LEVEL READ COMMITTED; UPDATE Mesas SET cod_moz ='"+mo+"' WHERE cod_mesa="+a);
+           if(querynew.exec()){
+               qDebug() << "RESERVANDO MESA: " << 6 <<"...";
+           }else{
+               qDebug() << "ERROR EN LA RESERVA";
+           }
+
+        //nuevo.exec("SET IMPLICIT_TRANSACTIONS ON; SET TRANSACTION ISOLATION LEVEL READ COMMITTED; UPDATE Mesas SET cod_moz ='"+mo+"' WHERE cod_mesa="+a);
+
+
+       /* queryenvio = new Mesas(querynew);//inicializando
+
+       */
+
         ventana = new RegistrarMesa();
         ventana->setVisible(true);
     }
@@ -312,6 +392,18 @@ void EscojerMesa::on_pushButton_mesa7_clicked()
         msg.setText("Mesa Ocupada");
         msg.exec();
     }else{
+        char* mozos = mesas->getmozos();
+        QString mo = mozos;
+        qDebug() << a;
+
+        QSqlDatabase::database().transaction();//SE PUDO LA TRANSACTION
+           QSqlQuery querynew;
+           querynew.exec("SET TRANSACTION ISOLATION LEVEL READ COMMITTED; UPDATE Mesas SET cod_moz ='"+mo+"' WHERE cod_mesa="+a);
+           if(querynew.exec()){
+               qDebug() << "RESERVANDO MESA: " << 6 <<"...";
+           }else{
+               qDebug() << "ERROR EN LA RESERVA";
+           }
         ventana = new RegistrarMesa();
         ventana->setVisible(true);
     }
@@ -356,6 +448,18 @@ void EscojerMesa::on_pushButton_mesa8_clicked()
         msg.setText("Mesa Ocupada");
         msg.exec();
     }else{
+        char* mozos = mesas->getmozos();
+        QString mo = mozos;
+        qDebug() << a;
+
+        QSqlDatabase::database().transaction();//SE PUDO LA TRANSACTION
+           QSqlQuery querynew;
+           querynew.exec("SET TRANSACTION ISOLATION LEVEL READ COMMITTED; UPDATE Mesas SET cod_moz ='"+mo+"' WHERE cod_mesa="+a);
+           if(querynew.exec()){
+               qDebug() << "RESERVANDO MESA: " << 6 <<"...";
+           }else{
+               qDebug() << "ERROR EN LA RESERVA";
+        }
         ventana = new RegistrarMesa();
         ventana->setVisible(true);
     }
