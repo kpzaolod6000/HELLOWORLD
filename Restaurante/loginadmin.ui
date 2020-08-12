@@ -6,12 +6,15 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>999</width>
-    <height>456</height>
+    <width>602</width>
+    <height>364</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Dialog</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-image: url(:/image/107525323_282495186394929_5911216239822423774_n.jpg);</string>
   </property>
   <widget class="QLineEdit" name="lineEdit_codigo">
    <property name="geometry">
@@ -21,6 +24,9 @@
      <width>113</width>
      <height>22</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background:rgb(255, 255, 255)</string>
    </property>
   </widget>
   <widget class="QLineEdit" name="lineEdit_password">
@@ -32,6 +38,9 @@
      <height>22</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">background:rgb(255, 255, 255)</string>
+   </property>
   </widget>
   <widget class="QLabel" name="label">
    <property name="geometry">
@@ -41,6 +50,9 @@
      <width>55</width>
      <height>16</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background:rgb(255, 255, 255)</string>
    </property>
    <property name="text">
     <string>ID:</string>
@@ -55,6 +67,9 @@
      <height>16</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">background:rgb(255, 255, 255)</string>
+   </property>
    <property name="text">
     <string>Password:</string>
    </property>
@@ -68,6 +83,9 @@
      <height>28</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">background:rgb(255, 255, 0)</string>
+   </property>
    <property name="text">
     <string>Login</string>
    </property>
@@ -75,17 +93,44 @@
   <widget class="QPushButton" name="pushButton_back">
    <property name="geometry">
     <rect>
-     <x>30</x>
-     <y>410</y>
+     <x>10</x>
+     <y>330</y>
      <width>93</width>
      <height>28</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background:rgb(255, 255, 0)</string>
    </property>
    <property name="text">
     <string>atras</string>
    </property>
   </widget>
+  <widget class="QLabel" name="label_3">
+   <property name="geometry">
+    <rect>
+     <x>130</x>
+     <y>100</y>
+     <width>131</width>
+     <height>101</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background:rgb(255, 255, 255)</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap resource="image.qrc">:/image/61582045_2882921455083840_2986804722465243136_n.png</pixmap>
+   </property>
+   <property name="scaledContents">
+    <bool>true</bool>
+   </property>
+  </widget>
  </widget>
- <resources/>
+ <resources>
+  <include location="image.qrc"/>
+ </resources>
  <connections/>
 </ui>

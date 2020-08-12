@@ -10,6 +10,7 @@
 #include <QMessageBox>
 #include <QStringList>
 #include "empleados.h"
+#include "ubicacion.h"
 
 
 QT_BEGIN_NAMESPACE
@@ -27,7 +28,7 @@ public:
 private slots:
     void on_pushButton_login_clicked();
     void esconder();
-
+    void esconder2();
     void on_pushButton_clicked();
 
     void on_pushButton_salir_clicked();
@@ -35,5 +36,6 @@ private slots:
 private:
     Ui::MainWindow *ui;
     Empleados* ventana;
+    Ubicacion* ventana2;
 };
 #endif // MAINWINDOW_H

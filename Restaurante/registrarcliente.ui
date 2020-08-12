@@ -6,21 +6,27 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>793</width>
-    <height>520</height>
+    <width>834</width>
+    <height>412</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">background-image: url(:/image/elegante.jpg);</string>
+  </property>
   <widget class="QLabel" name="label_6">
    <property name="geometry">
     <rect>
-     <x>290</x>
+     <x>250</x>
      <y>330</y>
      <width>55</width>
      <height>16</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background:rgb(255, 255, 255)</string>
    </property>
    <property name="text">
     <string>Lugar</string>
@@ -35,18 +41,24 @@
      <height>21</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">background:rgb(255, 255, 255)</string>
+   </property>
    <property name="text">
-    <string>Paucarpata</string>
+    <string/>
    </property>
   </widget>
   <widget class="QPushButton" name="pushButton_guardar">
    <property name="geometry">
     <rect>
-     <x>690</x>
-     <y>470</y>
+     <x>680</x>
+     <y>340</y>
      <width>93</width>
      <height>28</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background:rgb(255, 255, 0)</string>
    </property>
    <property name="text">
     <string>Siguiente</string>
@@ -55,11 +67,14 @@
   <widget class="QPushButton" name="pushButton_2">
    <property name="geometry">
     <rect>
-     <x>10</x>
-     <y>480</y>
+     <x>20</x>
+     <y>340</y>
      <width>93</width>
      <height>28</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background:rgb(255, 255, 0);</string>
    </property>
    <property name="text">
     <string>atras</string>
@@ -74,14 +89,17 @@
      <height>16</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">background:rgb(255, 255, 255)</string>
+   </property>
    <property name="text">
     <string>REGISTRO DEL CLIENTE</string>
    </property>
   </widget>
-  <widget class="QWidget" name="">
+  <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
-     <x>390</x>
+     <x>380</x>
      <y>60</y>
      <width>139</width>
      <height>251</height>
@@ -89,26 +107,46 @@
    </property>
    <layout class="QVBoxLayout" name="verticalLayout">
     <item>
-     <widget class="QLineEdit" name="lineEdit_apelpaterno"/>
+     <widget class="QLineEdit" name="lineEdit_nombre">
+      <property name="styleSheet">
+       <string notr="true">background:rgb(255, 255, 255)</string>
+      </property>
+     </widget>
     </item>
     <item>
-     <widget class="QLineEdit" name="lineEdit_nombre"/>
+     <widget class="QLineEdit" name="lineEdit_apelpaterno">
+      <property name="styleSheet">
+       <string notr="true">background:rgb(255, 255, 255)</string>
+      </property>
+     </widget>
     </item>
     <item>
-     <widget class="QLineEdit" name="lineEdit_apel_materno"/>
+     <widget class="QLineEdit" name="lineEdit_apel_materno">
+      <property name="styleSheet">
+       <string notr="true">background:rgb(255, 255, 255)</string>
+      </property>
+     </widget>
     </item>
     <item>
-     <widget class="QLineEdit" name="lineEdit_direccion"/>
+     <widget class="QLineEdit" name="lineEdit_direccion">
+      <property name="styleSheet">
+       <string notr="true">background:rgb(255, 255, 255)</string>
+      </property>
+     </widget>
     </item>
     <item>
-     <widget class="QLineEdit" name="lineEdit_telefono"/>
+     <widget class="QLineEdit" name="lineEdit_telefono">
+      <property name="styleSheet">
+       <string notr="true">background:rgb(255, 255, 255)</string>
+      </property>
+     </widget>
     </item>
    </layout>
   </widget>
-  <widget class="QWidget" name="">
+  <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
-     <x>280</x>
+     <x>230</x>
      <y>70</y>
      <width>98</width>
      <height>231</height>
@@ -117,6 +155,9 @@
    <layout class="QVBoxLayout" name="verticalLayout_2">
     <item>
      <widget class="QLabel" name="label">
+      <property name="styleSheet">
+       <string notr="true">background:rgb(255, 255, 255)</string>
+      </property>
       <property name="text">
        <string>Nombre</string>
       </property>
@@ -124,6 +165,9 @@
     </item>
     <item>
      <widget class="QLabel" name="label_2">
+      <property name="styleSheet">
+       <string notr="true">background:rgb(255, 255, 255)</string>
+      </property>
       <property name="text">
        <string>Apellido Paterno</string>
       </property>
@@ -131,6 +175,9 @@
     </item>
     <item>
      <widget class="QLabel" name="label_3">
+      <property name="styleSheet">
+       <string notr="true">background:rgb(255, 255, 255)</string>
+      </property>
       <property name="text">
        <string>Apellido Materno</string>
       </property>
@@ -138,6 +185,9 @@
     </item>
     <item>
      <widget class="QLabel" name="label_4">
+      <property name="styleSheet">
+       <string notr="true">background:rgb(255, 255, 255)</string>
+      </property>
       <property name="text">
        <string>direccion</string>
       </property>
@@ -145,6 +195,9 @@
     </item>
     <item>
      <widget class="QLabel" name="label_5">
+      <property name="styleSheet">
+       <string notr="true">background:rgb(255, 255, 255)</string>
+      </property>
       <property name="text">
        <string>Telefonos</string>
       </property>

@@ -4,5 +4,11 @@
     <qresource prefix="/">
         <file>../image/ppt_slide1.jpg</file>
         <file>../image/elegante.jpg</file>
+        <file>../image/116265143_300082811189171_2775200107219361635_n.jpg</file>
+        <file>../image/61582045_2882921455083840_2986804722465243136_n.png</file>
+        <file>../image/105999616_261599721599241_8638277958334433844_n.jpg</file>
+        <file>../image/107525323_282495186394929_5911216239822423774_n.jpg</file>
+        <file>../image/116133932_1972826549507920_1532840104564983649_n.jpg</file>
+        <file>../image/rest.jpg</file>
     </qresource>
 </RCC>

@@ -8,15 +8,10 @@ Empleados::Empleados(QWidget *parent) :
     ui->setupUi(this);
 }
 
-Empleados::~Empleados()
-{
-    delete ui;
-}
-
 void Empleados::on_pushButton_mozo_clicked()
 {
     //esconder esta ventanamainwindow y s emuestra la ventana mostrar
-    miniventana = new LoginMozo();
+    miniventana = new LoginMozo(this,"");
     miniventana -> exec();
 }
 
@@ -31,3 +26,16 @@ void Empleados::on_pushButton_administrador_clicked()
     miniventanal = new LoginAdmin();
     miniventanal -> exec();
 }
+
+void Empleados::on_pushButton_reserva_clicked()
+{
+    miniventana = new LoginMozo(this,"Reservar");
+    //miniventana->setStyleSheet("/image/rest.jpg");
+    miniventana->exec();
+}
+
+Empleados::~Empleados()
+{
+    delete ui;
+}
+

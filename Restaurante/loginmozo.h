@@ -10,6 +10,7 @@
 #include <QMessageBox>
 #include <QStringList>
 #include "escojermesa.h"
+#include "mesasucursal.h"
 #include "mesas.h"
 
 namespace Ui {
@@ -21,7 +22,7 @@ class LoginMozo : public QDialog
     Q_OBJECT
 
 public:
-    explicit LoginMozo(QWidget *parent = nullptr);
+    explicit LoginMozo(QWidget *parent = nullptr,QString reservar = nullptr);
     ~LoginMozo();
 
 private slots:
@@ -33,7 +34,9 @@ private:
     Ui::LoginMozo *ui;
     //RegistrarMesa* ventana;
     EscojerMesa* ventana;
+    MesaSucursal* sucursal;
     Mesas* mesas;
+    QString reservar;
 };
 
 #endif // LOGINMOZO_H

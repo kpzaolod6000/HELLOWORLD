@@ -61,7 +61,7 @@ void RegistrarMesa::on_pushButton_helados_clicked()
 
     QSqlQuery query;
 
-    query.prepare("SELECT nombres,precio,stock FROM Producto p INNER JOIN [192.168.0.104].Restaurante.dbo.Producto ipp ON p.enlace = ipp.enlace WHERE p.cod_catg = 5550");
+    query.prepare("SELECT nombres,precio,stock FROM Producto p INNER JOIN [192.168.0.102].Restaurante.dbo.Producto ipp ON p.enlace = ipp.enlace WHERE p.cod_catg = 5550");
     if(query.exec()){
         qDebug()<<"CONSULTA CORRECTA";
         int fila = 0;
@@ -93,7 +93,7 @@ void RegistrarMesa::on_pushButton_fria_clicked()
     ui->tableWidget_productos->clear();
 
     QSqlQuery query;
-    query.prepare("SELECT nombres,precio,stock FROM Producto p INNER JOIN [192.168.0.104].Restaurante.dbo.Producto ipp ON p.enlace = ipp.enlace WHERE p.cod_catg = 55511");
+    query.prepare("SELECT nombres,precio,stock FROM Producto p INNER JOIN [192.168.0.102].Restaurante.dbo.Producto ipp ON p.enlace = ipp.enlace WHERE p.cod_catg = 55511");
     if(query.exec()){
         qDebug()<<"CONSULTA CORRECTA";
         int fila = 0;
@@ -125,7 +125,7 @@ void RegistrarMesa::on_pushButton_entrada_clicked()
     ui->tableWidget_productos->clear();
 
     QSqlQuery query;
-    query.prepare("SELECT nombres,precio,stock FROM Producto p INNER JOIN [192.168.0.104].Restaurante.dbo.Producto ipp ON p.enlace = ipp.enlace WHERE p.cod_catg = 5554");
+    query.prepare("SELECT nombres,precio,stock FROM Producto p INNER JOIN [192.168.0.102].Restaurante.dbo.Producto ipp ON p.enlace = ipp.enlace WHERE p.cod_catg = 5554");
     if(query.exec()){
         qDebug()<<"CONSULTA CORRECTA";
         int fila = 0;
@@ -156,7 +156,7 @@ void RegistrarMesa::on_pushButton_segund_clicked()
     ui->tableWidget_productos->clear();
 
     QSqlQuery query;
-    query.prepare("SELECT nombres,precio,stock FROM Producto p INNER JOIN [192.168.0.104].Restaurante.dbo.Producto ipp ON p.enlace = ipp.enlace WHERE p.cod_catg = 5557");
+    query.prepare("SELECT nombres,precio,stock FROM Producto p INNER JOIN [192.168.0.102].Restaurante.dbo.Producto ipp ON p.enlace = ipp.enlace WHERE p.cod_catg = 5557");
     if(query.exec()){
         qDebug()<<"CONSULTA CORRECTA";
         int fila = 0;
@@ -190,7 +190,7 @@ void RegistrarMesa::on_pushButton_postres_clicked()
     ui->tableWidget_productos->clear();
 
     QSqlQuery query;
-    query.prepare("SELECT nombres,precio,stock FROM Producto p INNER JOIN [192.168.0.104].Restaurante.dbo.Producto ipp ON p.enlace = ipp.enlace WHERE p.cod_catg = 5555");
+    query.prepare("SELECT nombres,precio,stock FROM Producto p INNER JOIN [192.168.0.102].Restaurante.dbo.Producto ipp ON p.enlace = ipp.enlace WHERE p.cod_catg = 5555");
     if(query.exec()){
         qDebug()<<"CONSULTA CORRECTA";
         int fila = 0;
@@ -256,8 +256,6 @@ void RegistrarMesa::on_pushButton_escojer_clicked()
     if(escojer != 0){
         int setfila = ui->tableWidget_productos->currentRow();
         if(setfila != -1){
-            qDebug() << setfila <<"AQUIII";
-            //qDebug() << ui->tableWidget_productos->item(setfila,0)->text()<< " "<<ui->tableWidget_productos->item(setfila,1)->text() <<"AQUIII";
             QString nombre = ui->tableWidget_productos->item(setfila,0)->text();
             QString precio = ui->tableWidget_productos->item(setfila,1)->text();
 
@@ -280,11 +278,9 @@ void RegistrarMesa::on_pushButton_escojer_clicked()
             if(esta){
                 ui->label_puesto->setText("El plato ya fue escogido");
             }else{
-                //Lista[i] = setfila;
+
                 mostrarpedidos(nombre,precio);//
-                //i++;
                 ui->label_puesto->setText(" ");
-                //setfila = -1;//NO funciona porque ya esta selecionando ptmr
            }
         }else{
             QMessageBox msg(this);
@@ -362,13 +358,9 @@ void RegistrarMesa::on_pushButton_quitar_clicked()
         ui->tableWidget_muestra->removeRow(setfila);
         quitar = setfila;
         listapedidos--;
-        //ui->tableWidget_muestra->insertRow(setfila);
     }else{
         ui->label_puesto->setText("Por favor escoja el plato que quiere eliminar");
     }
-    //cuando se quita uno
-    //listapedidos--;recomendable guardar las filas eliminadas en un arreglo static int
-
 }
 
 void RegistrarMesa :: Saldo(){
@@ -391,7 +383,6 @@ void RegistrarMesa::on_pushButton_registrar_clicked()
     QStringList nombre;
     QStringList precio;
     QStringList cantidad;
-
 
     if(listapedidos != 0){
         for(int j = 0;j<listapedidos;j++){

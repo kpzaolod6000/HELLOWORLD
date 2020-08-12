@@ -24,9 +24,11 @@ SOURCES += \
     main.cpp \
     mainwindow.cpp \
     mesas.cpp \
+    mesasucursal.cpp \
     registrarcliente.cpp \
     registrarmesa.cpp \
-    reportes.cpp
+    reportes.cpp \
+    ubicacion.cpp
 
 HEADERS += \
     empleados.h \
@@ -36,9 +38,11 @@ HEADERS += \
     loginmozo.h \
     mainwindow.h \
     mesas.h \
+    mesasucursal.h \
     registrarcliente.h \
     registrarmesa.h \
-    reportes.h
+    reportes.h \
+    ubicacion.h
 
 FORMS += \
     empleados.ui \
@@ -47,9 +51,11 @@ FORMS += \
     loginadmin.ui \
     loginmozo.ui \
     mainwindow.ui \
+    mesasucursal.ui \
     registrarcliente.ui \
     registrarmesa.ui \
-    reportes.ui
+    reportes.ui \
+    ubicacion.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

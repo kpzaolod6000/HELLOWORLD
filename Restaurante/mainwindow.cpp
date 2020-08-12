@@ -19,6 +19,7 @@ MainWindow::MainWindow(QWidget *parent)
         ui->label->setText("CERRADO");
     }
 
+
 }
 
 MainWindow::~MainWindow()
@@ -30,6 +31,12 @@ void MainWindow::esconder()
 {
     this->setVisible(true);
     ventana->setVisible(false);
+}
+
+void MainWindow::esconder2()
+{
+    this->setVisible(true);
+    ventana2->setVisible(false);
 }
 
 
@@ -44,6 +51,10 @@ void MainWindow::on_pushButton_login_clicked()
 
 void MainWindow::on_pushButton_clicked()
 {
+    ventana2 = new Ubicacion();
+    QObject :: connect(ventana2,SIGNAL(back()),this,SLOT(esconder2()));
+    this->setVisible(false);
+    ventana2->setVisible(true);
 }
 
 void MainWindow::on_pushButton_salir_clicked()

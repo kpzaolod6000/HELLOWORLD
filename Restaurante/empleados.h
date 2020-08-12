@@ -25,6 +25,8 @@ private slots:
 
     void on_pushButton_administrador_clicked();
 
+    void on_pushButton_reserva_clicked();
+
 private:
     Ui::Empleados *ui;
     LoginMozo* miniventana;

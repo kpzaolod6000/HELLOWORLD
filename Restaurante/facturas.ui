@@ -13,14 +13,20 @@
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">background-image: url(:/image/107525323_282495186394929_5911216239822423774_n.jpg);</string>
+  </property>
   <widget class="QLabel" name="label_nombre">
    <property name="geometry">
     <rect>
-     <x>130</x>
+     <x>110</x>
      <y>70</y>
      <width>591</width>
      <height>31</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background:rgb(255, 255, 255)</string>
    </property>
    <property name="text">
     <string/>
@@ -35,8 +41,11 @@
      <height>16</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">background:rgb(255, 255, 255)</string>
+   </property>
    <property name="text">
-    <string>Nombre_:</string>
+    <string>Nombre :</string>
    </property>
   </widget>
   <widget class="QLabel" name="label_3">
@@ -47,6 +56,9 @@
      <width>55</width>
      <height>16</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background:rgb(255, 255, 255)</string>
    </property>
    <property name="text">
     <string>Fecha:</string>
@@ -61,6 +73,9 @@
      <height>16</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">background:rgb(255, 255, 255)</string>
+   </property>
    <property name="text">
     <string>Hora:</string>
    </property>
@@ -70,9 +85,12 @@
     <rect>
      <x>120</x>
      <y>120</y>
-     <width>55</width>
+     <width>71</width>
      <height>16</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background:rgb(255, 255, 255)</string>
    </property>
    <property name="text">
     <string>TextLabel</string>
@@ -87,6 +105,9 @@
      <height>16</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">background:rgb(255, 255, 255)</string>
+   </property>
    <property name="text">
     <string>TextLabel</string>
    </property>
@@ -99,6 +120,9 @@
      <width>55</width>
      <height>16</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background:rgb(255, 255, 255)</string>
    </property>
    <property name="text">
     <string>Saldo:</string>
@@ -113,6 +137,9 @@
      <height>16</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">background:rgb(255, 255, 255)</string>
+   </property>
    <property name="text">
     <string>precio</string>
    </property>
@@ -125,6 +152,9 @@
      <width>55</width>
      <height>16</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background:rgb(255, 255, 255)</string>
    </property>
    <property name="text">
     <string>TextLabel</string>
@@ -139,6 +169,9 @@
      <height>16</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">background:rgb(255, 255, 255)</string>
+   </property>
    <property name="text">
     <string>impuesto:</string>
    </property>
@@ -151,6 +184,9 @@
      <width>71</width>
      <height>16</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background:rgb(255, 255, 255)</string>
    </property>
    <property name="text">
     <string>descuento:</string>
@@ -165,6 +201,9 @@
      <height>16</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">background:rgb(255, 255, 255)</string>
+   </property>
    <property name="text">
     <string>TextLabel</string>
    </property>
@@ -177,6 +216,9 @@
      <width>55</width>
      <height>16</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background:rgb(255, 255, 255)</string>
    </property>
    <property name="text">
     <string>TOTAL:</string>
@@ -191,6 +233,9 @@
      <height>16</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">background:rgb(255, 255, 255)</string>
+   </property>
    <property name="text">
     <string>total</string>
    </property>
@@ -204,6 +249,9 @@
      <height>28</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">background:rgb(255, 255, 255)</string>
+   </property>
    <property name="text">
     <string>PAGAR</string>
    </property>
@@ -216,6 +264,9 @@
      <width>531</width>
      <height>181</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background: qconicalgradient(cx:0.5, cy:0.5, angle:0, stop:0 rgba(35, 40, 3, 255), stop:0.16 rgba(136, 106, 22, 255), stop:0.225 rgba(166, 140, 41, 255), stop:0.285 rgba(204, 181, 74, 255), stop:0.345 rgba(235, 219, 102, 255), stop:0.415 rgba(245, 236, 112, 255), stop:0.52 rgba(209, 190, 76, 255), stop:0.57 rgba(187, 156, 51, 255), stop:0.635 rgba(168, 142, 42, 255), stop:0.695 rgba(202, 174, 68, 255), stop:0.75 rgba(218, 202, 86, 255), stop:0.815 rgba(208, 187, 73, 255), stop:0.88 rgba(187, 156, 51, 255), stop:0.935 rgba(137, 108, 26, 255), stop:1 rgba(35, 40, 3, 255))</string>
    </property>
    <column>
     <property name="text">
