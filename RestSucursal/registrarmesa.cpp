@@ -36,17 +36,7 @@ void RegistrarMesa::on_pushButton_back_clicked()
     fila = 0;
     quitar = -1;
     listapedidos = 0;
-
-    //mesas = new Mesas();
-    //mesas->enviarquey().value("ROLLBACK");
-    //mesas->enviarquey().prepare("ROLLBACK");
-
     QSqlDatabase::database().rollback();
-    /*if(mesas->enviarquey().exec()){
-        qDebug() << "ROLLBACK";
-    }else{
-        qDebug() << "ERROR";
-    }*/
     this->setVisible(false);
 }
 
@@ -61,7 +51,7 @@ void RegistrarMesa::on_pushButton_helados_clicked()
 
     QSqlQuery query;
 
-    query.prepare("SELECT ipp.nombres,p.precio, p.stock FROM [192.168.0.103].Restaurante.dbo.Producto ipp INNER JOIN Producto p  ON ipp.enlace = p.enlace WHERE ipp.cod_catg = 5550");
+    query.prepare("SELECT ipp.nombres,p.precio, p.stock FROM [192.168.0.104].Restaurante.dbo.Producto ipp INNER JOIN Producto p  ON ipp.enlace = p.enlace WHERE ipp.cod_catg = 5550");
     if(query.exec()){
         qDebug()<<"CONSULTA CORRECTA";
         int fila = 0;
@@ -93,7 +83,7 @@ void RegistrarMesa::on_pushButton_fria_clicked()
     ui->tableWidget_productos->clear();
 
     QSqlQuery query;
-    query.prepare("SELECT ipp.nombres,p.precio, p.stock FROM [192.168.0.103].Restaurante.dbo.Producto ipp INNER JOIN Producto p  ON ipp.enlace = p.enlace WHERE ipp.cod_catg = 55511");
+    query.prepare("SELECT ipp.nombres,p.precio, p.stock FROM [192.168.0.104].Restaurante.dbo.Producto ipp INNER JOIN Producto p  ON ipp.enlace = p.enlace WHERE ipp.cod_catg = 55511");
     if(query.exec()){
         qDebug()<<"CONSULTA CORRECTA";
         int fila = 0;
@@ -125,7 +115,7 @@ void RegistrarMesa::on_pushButton_entrada_clicked()
     ui->tableWidget_productos->clear();
 
     QSqlQuery query;
-    query.prepare("SELECT ipp.nombres,p.precio, p.stock FROM [192.168.0.103].Restaurante.dbo.Producto ipp INNER JOIN Producto p  ON ipp.enlace = p.enlace WHERE ipp.cod_catg = 5554");
+    query.prepare("SELECT ipp.nombres,p.precio, p.stock FROM [192.168.0.104].Restaurante.dbo.Producto ipp INNER JOIN Producto p  ON ipp.enlace = p.enlace WHERE ipp.cod_catg = 5554");
     if(query.exec()){
         qDebug()<<"CONSULTA CORRECTA";
         int fila = 0;
@@ -156,7 +146,7 @@ void RegistrarMesa::on_pushButton_segund_clicked()
     ui->tableWidget_productos->clear();
 
     QSqlQuery query;
-    query.prepare("SELECT ipp.nombres,p.precio, p.stock FROM [192.168.0.103].Restaurante.dbo.Producto ipp INNER JOIN Producto p  ON ipp.enlace = p.enlace WHERE ipp.cod_catg = 5557");
+    query.prepare("SELECT ipp.nombres,p.precio, p.stock FROM [192.168.0.104].Restaurante.dbo.Producto ipp INNER JOIN Producto p  ON ipp.enlace = p.enlace WHERE ipp.cod_catg = 5557");
     if(query.exec()){
         qDebug()<<"CONSULTA CORRECTA";
         int fila = 0;
@@ -190,7 +180,7 @@ void RegistrarMesa::on_pushButton_postres_clicked()
     ui->tableWidget_productos->clear();
 
     QSqlQuery query;
-    query.prepare("SELECT ipp.nombres,p.precio, p.stock FROM [192.168.0.103].Restaurante.dbo.Producto ipp INNER JOIN Producto p  ON ipp.enlace = p.enlace WHERE ipp.cod_catg = 5555");
+    query.prepare("SELECT ipp.nombres,p.precio, p.stock FROM [192.168.0.104].Restaurante.dbo.Producto ipp INNER JOIN Producto p  ON ipp.enlace = p.enlace WHERE ipp.cod_catg = 5555");
     if(query.exec()){
         qDebug()<<"CONSULTA CORRECTA";
         int fila = 0;
@@ -425,6 +415,3 @@ void RegistrarMesa::esconder()
     this->setVisible(true);
     ventana->setVisible(false);
 }
-
-
-

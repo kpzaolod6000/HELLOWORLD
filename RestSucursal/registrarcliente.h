@@ -11,6 +11,7 @@
 #include <cstdlib>
 #include <QRandomGenerator64>
 #include "facturas.h"
+#include "mesas.h"
 
 namespace Ui {
 class RegistrarCliente;
@@ -37,6 +38,7 @@ private:
    QStringList precio_;
    QStringList cantidad_;
    Facturas* ventana;
+   Mesas* mesas;
 
 };
 

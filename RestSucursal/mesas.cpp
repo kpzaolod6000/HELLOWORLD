@@ -2,7 +2,7 @@
 
 static int mesas;
 static char* mozo;
-static QSqlQuery query;
+static QString reservar;
 Mesas::Mesas(int mesas)
 {
     ::mesas = mesas;
@@ -16,11 +16,10 @@ Mesas::Mesas(char* mozo)
     ::mozo = mozo;
 }
 
-Mesas::Mesas(QSqlQuery query)
+Mesas::Mesas(QString reservar)
 {
-    ::query = query;
+    ::reservar = reservar;
 }
-
 
 int Mesas :: getmesa(){
     return mesas;
@@ -29,7 +28,7 @@ char* Mesas :: getmozos(){
     return mozo;
 }
 
-QSqlQuery Mesas::enviarquey()
+QString Mesas::getreservar()
 {
-    return query;
+    return reservar;
 }

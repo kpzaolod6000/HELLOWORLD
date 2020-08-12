@@ -16,7 +16,7 @@ Empleados::~Empleados()
 void Empleados::on_pushButton_mozo_clicked()
 {
     //esconder esta ventanamainwindow y s emuestra la ventana mostrar
-    miniventana = new LoginMozo();
+    miniventana = new LoginMozo(this,"");
     miniventana -> exec();
 }
 
@@ -30,4 +30,10 @@ void Empleados::on_pushButton_administrador_clicked()
     //esconder esta ventanamainwindow y s emuestra la ventana mostrar
     miniventanal = new LoginAdmin();
     miniventanal -> exec();
+}
+
+void Empleados::on_pushButton_reservar_clicked()
+{
+    miniventana = new LoginMozo(this,"Reservar");
+    miniventana -> exec();
 }

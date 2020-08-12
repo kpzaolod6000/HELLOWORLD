@@ -1,19 +1,14 @@
-#include "escojermesa.h"
-#include "ui_escojermesa.h"
+#include "mesaprincipal.h"
+#include "ui_mesaprincipal.h"
 
-EscojerMesa::EscojerMesa(QWidget *parent) :
+MesaPrincipal::MesaPrincipal(QWidget *parent) :
     QDialog(parent),
-    ui(new Ui::EscojerMesa)
+    ui(new Ui::MesaPrincipal)
 {
     ui->setupUi(this);
 }
 
-EscojerMesa::~EscojerMesa()
-{
-    delete ui;
-}
-
-void EscojerMesa::on_pushButton_mesa1_clicked()
+void MesaPrincipal::on_pushButton_mesa1_clicked()
 {
     QString a = "1";
 
@@ -23,7 +18,7 @@ void EscojerMesa::on_pushButton_mesa1_clicked()
     QStringList cod_mesa;
 
     QSqlQuery query;
-    query.prepare("SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED; SELECT * FROM Mesas");
+    query.prepare("SET XACT_ABORT ON; SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED; SELECT * FROM [192.168.0.104].Restaurante.dbo.Mesas");
     query.exec();
     while(query.next()){
         cod_mesa << query.value(0).toByteArray().constData();
@@ -55,7 +50,7 @@ void EscojerMesa::on_pushButton_mesa1_clicked()
         QSqlQuery queryborrar;
         switch(ret){
             case QMessageBox::Yes:
-                queryborrar.prepare("UPDATE Mesas SET cod_cli = null, cod_moz = null WHERE cod_mesa="+a);
+                queryborrar.prepare("SET XACT_ABORT ON; UPDATE [192.168.0.104].Restaurante.dbo.Mesas SET cod_cli = null, cod_moz = null WHERE cod_mesa="+a);
                 if(queryborrar.exec())
                     qDebug() << "Se desocupo la mesa";
                 else{
@@ -82,7 +77,7 @@ void EscojerMesa::on_pushButton_mesa1_clicked()
             QSqlDatabase::database().transaction();//SE PUDO LA TRANSACTION
 
             QSqlQuery querynew;
-               querynew.prepare("SET XACT_ABORT ON;SET TRANSACTION ISOLATION LEVEL READ COMMITTED; UPDATE Mesas SET cod_moz ='"+mo+"' WHERE cod_mesa="+a);
+               querynew.prepare("SET XACT_ABORT ON;SET TRANSACTION ISOLATION LEVEL READ COMMITTED; UPDATE [192.168.0.104].Restaurante.dbo.Mesas SET cod_moz ='"+mo+"' WHERE cod_mesa="+a);
                if(querynew.exec()){
                    qDebug() << "RESERVANDO MESA: " << 1 <<"...";
                }else{
@@ -101,9 +96,9 @@ void EscojerMesa::on_pushButton_mesa1_clicked()
         }
     }
 }
-void EscojerMesa::on_pushButton_mesa2_clicked()
-{
 
+void MesaPrincipal::on_pushButton_mesa2_clicked()
+{
     QString a = "2";
 
     mesas = new Mesas(2); // llevando numero de la mesa
@@ -112,7 +107,7 @@ void EscojerMesa::on_pushButton_mesa2_clicked()
     QStringList cod_mesa;
 
     QSqlQuery query;
-    query.prepare("SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED; SELECT * FROM Mesas");
+    query.prepare("SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED; SELECT * FROM [192.168.0.104].Restaurante.dbo.Mesas");
     query.exec();
     while(query.next()){
         cod_mesa << query.value(0).toByteArray().constData();
@@ -144,7 +139,7 @@ void EscojerMesa::on_pushButton_mesa2_clicked()
         QSqlQuery queryborrar;
         switch(ret){
             case QMessageBox::Yes:
-                queryborrar.prepare("UPDATE Mesas SET cod_cli = null, cod_moz = null WHERE cod_mesa="+a);
+                queryborrar.prepare("UPDATE [192.168.0.104].Restaurante.dbo.Mesas SET cod_cli = null, cod_moz = null WHERE cod_mesa="+a);
                 if(queryborrar.exec())
                     qDebug() << "Se desocupo la mesa";
                 else{
@@ -171,7 +166,7 @@ void EscojerMesa::on_pushButton_mesa2_clicked()
             QSqlDatabase::database().transaction();//SE PUDO LA TRANSACTION
 
             QSqlQuery querynew;
-               querynew.prepare("SET XACT_ABORT ON;SET TRANSACTION ISOLATION LEVEL READ COMMITTED; UPDATE Mesas SET cod_moz ='"+mo+"' WHERE cod_mesa="+a);
+               querynew.prepare("SET XACT_ABORT ON;SET TRANSACTION ISOLATION LEVEL READ COMMITTED; UPDATE [192.168.0.104].Restaurante.dbo.Mesas SET cod_moz ='"+mo+"' WHERE cod_mesa="+a);
                if(querynew.exec()){
                    qDebug() << "RESERVANDO MESA: " << 2 <<"...";
                }else{
@@ -189,11 +184,11 @@ void EscojerMesa::on_pushButton_mesa2_clicked()
             msg.exec();
         }
     }
+
 }
 
-void EscojerMesa::on_pushButton_mesa3_clicked()
+void MesaPrincipal::on_pushButton_mesa3_clicked()
 {
-
     QString a = "3";
 
     mesas = new Mesas(3); // llevando numero de la mesa
@@ -202,7 +197,7 @@ void EscojerMesa::on_pushButton_mesa3_clicked()
     QStringList cod_mesa;
 
     QSqlQuery query;
-    query.prepare("SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED; SELECT * FROM Mesas");
+    query.prepare("SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED; SELECT * FROM [192.168.0.104].Restaurante.dbo.Mesas");
     query.exec();
     while(query.next()){
         cod_mesa << query.value(0).toByteArray().constData();
@@ -234,7 +229,7 @@ void EscojerMesa::on_pushButton_mesa3_clicked()
         QSqlQuery queryborrar;
         switch(ret){
             case QMessageBox::Yes:
-                queryborrar.prepare("UPDATE Mesas SET cod_cli = null, cod_moz = null WHERE cod_mesa="+a);
+                queryborrar.prepare("UPDATE [192.168.0.104].Restaurante.dbo.Mesas SET cod_cli = null, cod_moz = null WHERE cod_mesa="+a);
                 if(queryborrar.exec())
                     qDebug() << "Se desocupo la mesa";
                 else{
@@ -261,7 +256,7 @@ void EscojerMesa::on_pushButton_mesa3_clicked()
             QSqlDatabase::database().transaction();//SE PUDO LA TRANSACTION
 
             QSqlQuery querynew;
-               querynew.prepare("SET XACT_ABORT ON;SET TRANSACTION ISOLATION LEVEL READ COMMITTED; UPDATE Mesas SET cod_moz ='"+mo+"' WHERE cod_mesa="+a);
+               querynew.prepare("SET XACT_ABORT ON;SET TRANSACTION ISOLATION LEVEL READ COMMITTED; UPDATE [192.168.0.104].Restaurante.dbo.Mesas SET cod_moz ='"+mo+"' WHERE cod_mesa="+a);
                if(querynew.exec()){
                    qDebug() << "RESERVANDO MESA: " << 3 <<"...";
                }else{
@@ -279,12 +274,11 @@ void EscojerMesa::on_pushButton_mesa3_clicked()
             msg.exec();
         }
     }
+
 }
 
-
-void EscojerMesa::on_pushButton_mesa4_clicked()
+void MesaPrincipal::on_pushButton_mesa4_clicked()
 {
-
     QString a = "4";
 
     mesas = new Mesas(4); // llevando numero de la mesa
@@ -293,7 +287,7 @@ void EscojerMesa::on_pushButton_mesa4_clicked()
     QStringList cod_mesa;
 
     QSqlQuery query;
-    query.prepare("SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED; SELECT * FROM Mesas");
+    query.prepare("SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED; SELECT * FROM [192.168.0.104].Restaurante.dbo.Mesas");
     query.exec();
     while(query.next()){
         cod_mesa << query.value(0).toByteArray().constData();
@@ -325,7 +319,7 @@ void EscojerMesa::on_pushButton_mesa4_clicked()
         QSqlQuery queryborrar;
         switch(ret){
             case QMessageBox::Yes:
-                queryborrar.prepare("UPDATE Mesas SET cod_cli = null, cod_moz = null WHERE cod_mesa="+a);
+                queryborrar.prepare("UPDATE [192.168.0.104].Restaurante.dbo.Mesas SET cod_cli = null, cod_moz = null WHERE cod_mesa="+a);
                 if(queryborrar.exec())
                     qDebug() << "Se desocupo la mesa";
                 else{
@@ -352,7 +346,7 @@ void EscojerMesa::on_pushButton_mesa4_clicked()
             QSqlDatabase::database().transaction();//SE PUDO LA TRANSACTION
 
             QSqlQuery querynew;
-               querynew.prepare("SET XACT_ABORT ON;SET TRANSACTION ISOLATION LEVEL READ COMMITTED; UPDATE Mesas SET cod_moz ='"+mo+"' WHERE cod_mesa="+a);
+               querynew.prepare("SET XACT_ABORT ON;SET TRANSACTION ISOLATION LEVEL READ COMMITTED; UPDATE [192.168.0.104].Restaurante.dbo.Mesas SET cod_moz ='"+mo+"' WHERE cod_mesa="+a);
                if(querynew.exec()){
                    qDebug() << "RESERVANDO MESA: " << 4 <<"...";
                }else{
@@ -370,12 +364,11 @@ void EscojerMesa::on_pushButton_mesa4_clicked()
             msg.exec();
         }
     }
+
 }
 
-
-void EscojerMesa::on_pushButton_mesa5_clicked()
+void MesaPrincipal::on_pushButton_mesa5_clicked()
 {
-
     QString a = "5";
 
     mesas = new Mesas(5); // llevando numero de la mesa
@@ -384,7 +377,7 @@ void EscojerMesa::on_pushButton_mesa5_clicked()
     QStringList cod_mesa;
 
     QSqlQuery query;
-    query.prepare("SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED; SELECT * FROM Mesas");
+    query.prepare("SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED; SELECT * FROM [192.168.0.104].Restaurante.dbo.Mesas");
     query.exec();
     while(query.next()){
         cod_mesa << query.value(0).toByteArray().constData();
@@ -416,7 +409,7 @@ void EscojerMesa::on_pushButton_mesa5_clicked()
         QSqlQuery queryborrar;
         switch(ret){
             case QMessageBox::Yes:
-                queryborrar.prepare("UPDATE Mesas SET cod_cli = null, cod_moz = null WHERE cod_mesa="+a);
+                queryborrar.prepare("UPDATE [192.168.0.104].Restaurante.dbo.Mesas SET cod_cli = null, cod_moz = null WHERE cod_mesa="+a);
                 if(queryborrar.exec())
                     qDebug() << "Se desocupo la mesa";
                 else{
@@ -443,7 +436,7 @@ void EscojerMesa::on_pushButton_mesa5_clicked()
             QSqlDatabase::database().transaction();//SE PUDO LA TRANSACTION
 
             QSqlQuery querynew;
-               querynew.prepare("SET XACT_ABORT ON;SET TRANSACTION ISOLATION LEVEL READ COMMITTED; UPDATE Mesas SET cod_moz ='"+mo+"' WHERE cod_mesa="+a);
+               querynew.prepare("SET XACT_ABORT ON;SET TRANSACTION ISOLATION LEVEL READ COMMITTED; UPDATE [192.168.0.104].Restaurante.dbo.Mesas SET cod_moz ='"+mo+"' WHERE cod_mesa="+a);
                if(querynew.exec()){
                    qDebug() << "RESERVANDO MESA: " << 5 <<"...";
                }else{
@@ -462,67 +455,9 @@ void EscojerMesa::on_pushButton_mesa5_clicked()
         }
     }
 }
-void EscojerMesa::on_pushButton_mesa6_clicked()
-{/*
-    QString a = "6";
 
-    mesas = new Mesas(6); // llevando numero de la mesa
-
-    QStringList Lista;
-    QStringList cod_mesa;
-
-    QSqlQuery query;
-    query.prepare("SELECT * FROM Mesas");
-    query.exec();
-    while(query.next()){
-        cod_mesa << query.value(0).toByteArray().constData();
-        Lista << query.value(1).toByteArray().constData();
-    }
-
-    qDebug() << Lista;
-    bool ocupado = false;
-    for(int j = 0;j < cod_mesa.size();j++){
-       if(a == cod_mesa[j]){
-           if(Lista[j] != nullptr){
-               ocupado = true;
-               break;
-           }
-       }
-    }
-
-    if(ocupado){
-        ///MENSAJE
-        QMessageBox msg(this);
-        msg.setStyleSheet(" background : #DF7401 ; font:20px");
-        msg.setIcon(QMessageBox::Information);
-        msg.setWindowTitle("OCUPADO");
-        msg.setText("Mesa Ocupada");
-        msg.exec();
-    }else{
-        char* mozos = mesas->getmozos();
-        QString mo = mozos;
-        qDebug() << a;
-
-        QSqlDatabase::database().transaction();//SE PUDO LA TRANSACTION
-           QSqlQuery querynew;
-           querynew.exec("SET TRANSACTION ISOLATION LEVEL READ COMMITTED; UPDATE Mesas SET cod_moz ='"+mo+"' WHERE cod_mesa="+a);
-           if(querynew.exec()){
-               qDebug() << "RESERVANDO MESA: " << 6 <<"...";
-           }else{
-               qDebug() << "ERROR EN LA RESERVA";
-           }
-
-        //nuevo.exec("SET IMPLICIT_TRANSACTIONS ON; SET TRANSACTION ISOLATION LEVEL READ COMMITTED; UPDATE Mesas SET cod_moz ='"+mo+"' WHERE cod_mesa="+a);
-
-
-       // queryenvio = new Mesas(querynew);//inicializando
-
-
-
-        ventana = new RegistrarMesa();
-        ventana->setVisible(true);
-    }*/
-
+void MesaPrincipal::on_pushButton_mesa6_clicked()
+{
     QString a = "6";
 
     mesas = new Mesas(6); // llevando numero de la mesa
@@ -531,7 +466,7 @@ void EscojerMesa::on_pushButton_mesa6_clicked()
     QStringList cod_mesa;
 
     QSqlQuery query;
-    query.prepare("SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED; SELECT * FROM Mesas");
+    query.prepare("SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED; SELECT * FROM [192.168.0.104].Restaurante.dbo.Mesas");
     query.exec();
     while(query.next()){
         cod_mesa << query.value(0).toByteArray().constData();
@@ -563,7 +498,7 @@ void EscojerMesa::on_pushButton_mesa6_clicked()
         QSqlQuery queryborrar;
         switch(ret){
             case QMessageBox::Yes:
-                queryborrar.prepare("UPDATE Mesas SET cod_cli = null, cod_moz = null WHERE cod_mesa="+a);
+                queryborrar.prepare("UPDATE [192.168.0.104].Restaurante.dbo.Mesas SET cod_cli = null, cod_moz = null WHERE cod_mesa="+a);
                 if(queryborrar.exec())
                     qDebug() << "Se desocupo la mesa";
                 else{
@@ -590,7 +525,7 @@ void EscojerMesa::on_pushButton_mesa6_clicked()
             QSqlDatabase::database().transaction();//SE PUDO LA TRANSACTION
 
             QSqlQuery querynew;
-               querynew.prepare("SET XACT_ABORT ON;SET TRANSACTION ISOLATION LEVEL READ COMMITTED; UPDATE Mesas SET cod_moz ='"+mo+"' WHERE cod_mesa="+a);
+               querynew.prepare("SET XACT_ABORT ON;SET TRANSACTION ISOLATION LEVEL READ COMMITTED; UPDATE [192.168.0.104].Restaurante.dbo.Mesas SET cod_moz ='"+mo+"' WHERE cod_mesa="+a);
                if(querynew.exec()){
                    qDebug() << "RESERVANDO MESA: " << 6 <<"...";
                }else{
@@ -610,9 +545,8 @@ void EscojerMesa::on_pushButton_mesa6_clicked()
     }
 }
 
-void EscojerMesa::on_pushButton_mesa7_clicked()
+void MesaPrincipal::on_pushButton_mesa7_clicked()
 {
-
     QString a = "7";
 
     mesas = new Mesas(7); // llevando numero de la mesa
@@ -621,7 +555,7 @@ void EscojerMesa::on_pushButton_mesa7_clicked()
     QStringList cod_mesa;
 
     QSqlQuery query;
-    query.prepare("SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED; SELECT * FROM Mesas");
+    query.prepare("SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED; SELECT * FROM [192.168.0.104].Restaurante.dbo.Mesas");
     query.exec();
     while(query.next()){
         cod_mesa << query.value(0).toByteArray().constData();
@@ -653,7 +587,7 @@ void EscojerMesa::on_pushButton_mesa7_clicked()
         QSqlQuery queryborrar;
         switch(ret){
             case QMessageBox::Yes:
-                queryborrar.prepare("UPDATE Mesas SET cod_cli = null, cod_moz = null WHERE cod_mesa="+a);
+                queryborrar.prepare("UPDATE [192.168.0.104].Restaurante.dbo.Mesas SET cod_cli = null, cod_moz = null WHERE cod_mesa="+a);
                 if(queryborrar.exec())
                     qDebug() << "Se desocupo la mesa";
                 else{
@@ -680,7 +614,7 @@ void EscojerMesa::on_pushButton_mesa7_clicked()
             QSqlDatabase::database().transaction();//SE PUDO LA TRANSACTION
 
             QSqlQuery querynew;
-               querynew.prepare("SET XACT_ABORT ON;SET TRANSACTION ISOLATION LEVEL READ COMMITTED; UPDATE Mesas SET cod_moz ='"+mo+"' WHERE cod_mesa="+a);
+               querynew.prepare("SET XACT_ABORT ON;SET TRANSACTION ISOLATION LEVEL READ COMMITTED; UPDATE [192.168.0.104].Restaurante.dbo.Mesas SET cod_moz ='"+mo+"' WHERE cod_mesa="+a);
                if(querynew.exec()){
                    qDebug() << "RESERVANDO MESA: " << 7 <<"...";
                }else{
@@ -698,13 +632,10 @@ void EscojerMesa::on_pushButton_mesa7_clicked()
             msg.exec();
         }
     }
-
 }
 
-
-void EscojerMesa::on_pushButton_mesa8_clicked()
+void MesaPrincipal::on_pushButton_mesa8_clicked()
 {
-
     QString a = "8";
 
     mesas = new Mesas(8); // llevando numero de la mesa
@@ -713,7 +644,7 @@ void EscojerMesa::on_pushButton_mesa8_clicked()
     QStringList cod_mesa;
 
     QSqlQuery query;
-    query.prepare("SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED; SELECT * FROM Mesas");
+    query.prepare("SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED; SELECT * FROM [192.168.0.104].Restaurante.dbo.Mesas");
     query.exec();
     while(query.next()){
         cod_mesa << query.value(0).toByteArray().constData();
@@ -745,7 +676,7 @@ void EscojerMesa::on_pushButton_mesa8_clicked()
         QSqlQuery queryborrar;
         switch(ret){
             case QMessageBox::Yes:
-                queryborrar.prepare("UPDATE Mesas SET cod_cli = null, cod_moz = null WHERE cod_mesa="+a);
+                queryborrar.prepare("UPDATE [192.168.0.104].Restaurante.dbo.Mesas SET cod_cli = null, cod_moz = null WHERE cod_mesa="+a);
                 if(queryborrar.exec())
                     qDebug() << "Se desocupo la mesa";
                 else{
@@ -772,7 +703,7 @@ void EscojerMesa::on_pushButton_mesa8_clicked()
             QSqlDatabase::database().transaction();//SE PUDO LA TRANSACTION
 
             QSqlQuery querynew;
-               querynew.prepare("SET XACT_ABORT ON;SET TRANSACTION ISOLATION LEVEL READ COMMITTED; UPDATE Mesas SET cod_moz ='"+mo+"' WHERE cod_mesa="+a);
+               querynew.prepare("SET XACT_ABORT ON;SET TRANSACTION ISOLATION LEVEL READ COMMITTED; UPDATE [192.168.0.104].Restaurante.dbo.Mesas SET cod_moz ='"+mo+"' WHERE cod_mesa="+a);
                if(querynew.exec()){
                    qDebug() << "RESERVANDO MESA: " << 8 <<"...";
                }else{
@@ -792,7 +723,13 @@ void EscojerMesa::on_pushButton_mesa8_clicked()
     }
 }
 
-void EscojerMesa::on_pushButton_back_clicked()
+MesaPrincipal::~MesaPrincipal()
+{
+    delete ui;
+}
+
+void MesaPrincipal::on_pushButton_atras_clicked()
 {
     this->setVisible(false);
 }
+

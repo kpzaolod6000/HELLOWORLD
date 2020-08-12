@@ -23,6 +23,7 @@ SOURCES += \
     loginmozo.cpp \
     main.cpp \
     mainwindow.cpp \
+    mesaprincipal.cpp \
     mesas.cpp \
     registrarcliente.cpp \
     registrarmesa.cpp \
@@ -35,6 +36,7 @@ HEADERS += \
     loginadmin.h \
     loginmozo.h \
     mainwindow.h \
+    mesaprincipal.h \
     mesas.h \
     registrarcliente.h \
     registrarmesa.h \
@@ -47,6 +49,7 @@ FORMS += \
     loginadmin.ui \
     loginmozo.ui \
     mainwindow.ui \
+    mesaprincipal.ui \
     registrarcliente.ui \
     registrarmesa.ui \
     reportes.ui

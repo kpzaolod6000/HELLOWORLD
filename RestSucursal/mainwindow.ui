@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1265</width>
-    <height>746</height>
+    <width>925</width>
+    <height>695</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -36,7 +36,7 @@
    <widget class="QPushButton" name="pushButton_login">
     <property name="geometry">
      <rect>
-      <x>570</x>
+      <x>400</x>
       <y>560</y>
       <width>151</width>
       <height>51</height>
@@ -52,7 +52,7 @@
    <widget class="QPushButton" name="pushButton_salir">
     <property name="geometry">
      <rect>
-      <x>1130</x>
+      <x>770</x>
       <y>580</y>
       <width>93</width>
       <height>28</height>
@@ -91,14 +91,30 @@
      <string>CONECTAR:</string>
     </property>
    </widget>
+   <widget class="QLabel" name="label_3">
+    <property name="geometry">
+     <rect>
+      <x>770</x>
+      <y>630</y>
+      <width>91</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background: rgb(255, 255, 255);</string>
+    </property>
+    <property name="text">
+     <string>Ubicacion: CAYMA</string>
+    </property>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1265</width>
-     <height>26</height>
+     <width>925</width>
+     <height>21</height>
     </rect>
    </property>
   </widget>

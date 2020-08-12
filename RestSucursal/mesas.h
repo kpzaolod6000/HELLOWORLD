@@ -14,10 +14,10 @@ public:
     Mesas(int);
     Mesas();
     Mesas(char*);
-    Mesas(QSqlQuery query);
+    Mesas(QString);
     int getmesa();
     char *getmozos();
-    QSqlQuery enviarquey();
+    QString getreservar();
 };
 
 #endif // MESAS_H

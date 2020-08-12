@@ -14,6 +14,12 @@ RegistrarCliente::RegistrarCliente(QWidget *parent,QStringList* nombre,QStringLi
     precio_ = *precio;
     cantidad_ = *cantidad;
 
+    mesas = new Mesas();
+    if(mesas->getreservar() == "Reservar")
+        ui->label_lugar->setText("Paucarpata");
+    else
+        ui->label_lugar->setText("Cayma");
+
 }
 
 RegistrarCliente::~RegistrarCliente()
@@ -28,57 +34,66 @@ void RegistrarCliente::on_pushButton_2_clicked()
 
 void RegistrarCliente::on_pushButton_guardar_clicked()
 {
-    QString nombre = ui->lineEdit_nombre->text();
-    QString apel_paterno = ui->lineEdit_apelpaterno->text();
-    QString apel_materno = ui->lineEdit_apel_materno->text();
-    QString direccion = ui->lineEdit_direccion->text();
-    QString telefonos = ui->lineEdit_telefono->text();
-    QString codigo = "BBB";
+    if(mesas->getreservar() == "Reservar"){
+        QString nombre = ui->lineEdit_nombre->text();
+        QString apel_paterno = ui->lineEdit_apelpaterno->text();
+        QString apel_materno = ui->lineEdit_apel_materno->text();
+        QString direccion = ui->lineEdit_direccion->text();
+        QString telefonos = ui->lineEdit_telefono->text();
+        QString codigo = "AAA";
 
-    QSqlQuery select;
-    QStringList Lista;
-    select.prepare("SELECT * FROM Clientes");
-    select.exec();
-    while(select.next()){
-        Lista << select.value(0).toByteArray().constData();
-    }
-    qDebug() << Lista;
+        QSqlQuery select;
+        QStringList Lista;
+        select.prepare("SET XACT_ABORT ON; SELECT * FROM [192.168.0.104].Restaurante.dbo.Clientes");
+        select.exec();
+        while(select.next()){
+            Lista << select.value(0).toByteArray().constData();
+        }
+        //qDebug() << Lista;
 
-    bool esta = true;
-    while(esta != false){
-        srand(static_cast<unsigned int>(time(0)));
-        int value=100+rand() % 1001;
-        //qDebug() << value;
-        codigo = codigo + QString::number(value);
-        for(int j = 0;j < Lista.size();j++){
-            if(Lista[j] == codigo){
-                esta = true;
-                break;
-            }else{
-                esta = false;
+        bool esta = true;
+        while(esta != false){
+            srand(static_cast<unsigned int>(time(0)));
+            int value=1+rand() % 1001;
+            //qDebug() << value;
+            codigo = codigo + QString::number(value);
+            for(int j = 0;j < Lista.size();j++){
+                if(Lista[j] == codigo){
+                    esta = true;
+                    break;
+                }else{
+                    esta = false;
+                }
             }
         }
-    }
 
-    QString lugar = ui->label_lugar->text();
+        QString lugar = ui->label_lugar->text();
 
-    if(esta == false){
-        QSqlQuery query,query1;
-        if(!nombre.isEmpty() && !apel_materno.isEmpty() && !apel_paterno.isEmpty() ){
-            query.prepare("INSERT INTO Persona VALUES('"+codigo+"','"+nombre+"','"+apel_paterno+"','"+apel_materno+"','"+direccion+"','"+telefonos+"','"+lugar+"')");
-            query1.prepare("INSERT INTO Clientes VALUES ('"+codigo+"')");
-            if(query.exec() && query1.exec()){
-                QMessageBox msg(this);
-                msg.setStyleSheet(" background : #67FFF8 ; font:20px");
-                msg.setIcon(QMessageBox::Information);
-                msg.setWindowTitle("REGISTRO");
-                msg.setText("Registro Guardado");
-                msg.exec();
+        if(esta == false){
+            QSqlQuery query,query1;
+            if(!nombre.isEmpty() && !apel_materno.isEmpty() && !apel_paterno.isEmpty() ){
+                query.prepare("SET XACT_ABORT ON; INSERT INTO [192.168.0.104].Restaurante.dbo.Persona VALUES('"+codigo+"','"+nombre+"','"+apel_paterno+"','"+apel_materno+"','"+direccion+"','"+telefonos+"','"+lugar+"')");
+                query1.prepare("SET XACT_ABORT ON; INSERT INTO [192.168.0.104].Restaurante.dbo.Clientes VALUES ('"+codigo+"')");
+                if(query.exec() && query1.exec()){
+                    QMessageBox msg(this);
+                    msg.setStyleSheet(" background : #67FFF8 ; font:20px");
+                    msg.setIcon(QMessageBox::Information);
+                    msg.setWindowTitle("REGISTRO");
+                    msg.setText("Registro Guardado");
+                    msg.exec();
 
-                ventana = new Facturas(this,codigo,&nombre_,&precio_,&cantidad_);
-                this->setVisible(false);
-                ventana->setVisible(true);
+                    ventana = new Facturas(this,codigo,&nombre_,&precio_,&cantidad_);
+                    this->setVisible(false);
+                    ventana->setVisible(true);
 
+                }else{
+                    QMessageBox msg(this);
+                    msg.setStyleSheet(" background : #67FFF8 ; font:20px");
+                    msg.setIcon(QMessageBox::Warning);
+                    msg.setWindowTitle("SIN REGISTRAR");
+                    msg.setText("Registro No Guardado");
+                    msg.exec();
+                }
             }else{
                 QMessageBox msg(this);
                 msg.setStyleSheet(" background : #67FFF8 ; font:20px");
@@ -88,15 +103,81 @@ void RegistrarCliente::on_pushButton_guardar_clicked()
                 msg.exec();
             }
         }else{
-            QMessageBox msg(this);
-            msg.setStyleSheet(" background : #67FFF8 ; font:20px");
-            msg.setIcon(QMessageBox::Warning);
-            msg.setWindowTitle("SIN REGISTRAR");
-            msg.setText("Registro No Guardado");
-            msg.exec();
+            qDebug()<<"ERROR" << codigo;
         }
+
     }else{
-        qDebug()<<"ERROR" << codigo;
+        QString nombre = ui->lineEdit_nombre->text();
+        QString apel_paterno = ui->lineEdit_apelpaterno->text();
+        QString apel_materno = ui->lineEdit_apel_materno->text();
+        QString direccion = ui->lineEdit_direccion->text();
+        QString telefonos = ui->lineEdit_telefono->text();
+        QString codigo = "BBB";
+
+        QSqlQuery select;
+        QStringList Lista;
+        select.prepare("SELECT * FROM Clientes");
+        select.exec();
+        while(select.next()){
+            Lista << select.value(0).toByteArray().constData();
+        }
+        qDebug() << Lista;
+
+        bool esta = true;
+        while(esta != false){
+            srand(static_cast<unsigned int>(time(0)));
+            int value=100+rand() % 1001;
+            //qDebug() << value;
+            codigo = codigo + QString::number(value);
+            for(int j = 0;j < Lista.size();j++){
+                if(Lista[j] == codigo){
+                    esta = true;
+                    break;
+                }else{
+                    esta = false;
+                }
+            }
+        }
+
+        QString lugar = ui->label_lugar->text();
+
+        if(esta == false){
+            QSqlQuery query,query1;
+            if(!nombre.isEmpty() && !apel_materno.isEmpty() && !apel_paterno.isEmpty() ){
+                query.prepare("INSERT INTO Persona VALUES('"+codigo+"','"+nombre+"','"+apel_paterno+"','"+apel_materno+"','"+direccion+"','"+telefonos+"','"+lugar+"')");
+                query1.prepare("INSERT INTO Clientes VALUES ('"+codigo+"')");
+                if(query.exec() && query1.exec()){
+                    QMessageBox msg(this);
+                    msg.setStyleSheet(" background : #67FFF8 ; font:20px");
+                    msg.setIcon(QMessageBox::Information);
+                    msg.setWindowTitle("REGISTRO");
+                    msg.setText("Registro Guardado");
+                    msg.exec();
+
+                    ventana = new Facturas(this,codigo,&nombre_,&precio_,&cantidad_);
+                    this->setVisible(false);
+                    ventana->setVisible(true);
+
+                }else{
+                    QMessageBox msg(this);
+                    msg.setStyleSheet(" background : #67FFF8 ; font:20px");
+                    msg.setIcon(QMessageBox::Warning);
+                    msg.setWindowTitle("SIN REGISTRAR");
+                    msg.setText("Registro No Guardado");
+                    msg.exec();
+                }
+            }else{
+                QMessageBox msg(this);
+                msg.setStyleSheet(" background : #67FFF8 ; font:20px");
+                msg.setIcon(QMessageBox::Warning);
+                msg.setWindowTitle("SIN REGISTRAR");
+                msg.setText("Registro No Guardado");
+                msg.exec();
+            }
+        }else{
+            qDebug()<<"ERROR" << codigo;
+        }
+
     }
 
 }

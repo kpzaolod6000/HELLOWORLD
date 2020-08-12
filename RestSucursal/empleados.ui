@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>898</width>
-    <height>556</height>
+    <width>704</width>
+    <height>337</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -29,8 +29,8 @@
   <widget class="QPushButton" name="pushButton_back">
    <property name="geometry">
     <rect>
-     <x>10</x>
-     <y>520</y>
+     <x>0</x>
+     <y>300</y>
      <width>93</width>
      <height>28</height>
     </rect>
@@ -63,6 +63,19 @@
    </property>
    <property name="text">
     <string>Cajero</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_reservar">
+   <property name="geometry">
+    <rect>
+     <x>600</x>
+     <y>300</y>
+     <width>93</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Reservar Mesas</string>
    </property>
   </widget>
  </widget>

@@ -60,7 +60,7 @@ void Reportes::on_pushButton_clisucursal_clicked()
     //ui->tableWidget->close();
     ui->tableWidget->show();
 
-    query.prepare("SELECT * FROM Persona p INNER JOIN Clientes c ON p.codigo = c.codigo UNION SELECT * FROM [192.168.0.103].Restaurante.dbo.Persona p INNER JOIN [192.168.0.103].Restaurante.dbo.Clientes c ON p.codigo = c.codigo");
+    query.prepare("SELECT * FROM Persona p INNER JOIN Clientes c ON p.codigo = c.codigo UNION SELECT * FROM [192.168.0.104].Restaurante.dbo.Persona p INNER JOIN [192.168.0.104].Restaurante.dbo.Clientes c ON p.codigo = c.codigo");
     if(query.exec()){
         qDebug()<<"CONSULTA CORRECTA";
         int fila = 0;

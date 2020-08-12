@@ -5,6 +5,7 @@
 #include "loginmozo.h"
 #include "loginadmin.h"
 
+
 namespace Ui {
 class Empleados;
 }
@@ -24,6 +25,8 @@ private slots:
     void on_pushButton_back_clicked();
 
     void on_pushButton_administrador_clicked();
+
+    void on_pushButton_reservar_clicked();
 
 private:
     Ui::Empleados *ui;
