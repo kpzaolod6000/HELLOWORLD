@@ -27,7 +27,10 @@ private slots:
 
     void on_pushButton_clisucursal_clicked();
 
-    void on_pushButton_back_clicked();
+    void on_pushButton_back_clicked();    
+    void on_pushButton_pedidos_clicked();
+
+    void on_pushButton_pedidos_2_clicked();
 
 private:
     Ui::Reportes *ui;

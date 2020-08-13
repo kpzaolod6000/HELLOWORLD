@@ -287,13 +287,6 @@
       </property>
      </widget>
     </item>
-    <item>
-     <widget class="QPushButton" name="pushButton_14">
-      <property name="text">
-       <string>Sopas</string>
-      </property>
-     </widget>
-    </item>
    </layout>
   </widget>
   <widget class="QWidget" name="layoutWidget">
@@ -345,13 +338,6 @@
      <widget class="QPushButton" name="pushButton_cocteles">
       <property name="text">
        <string>Cocteles</string>
-      </property>
-     </widget>
-    </item>
-    <item>
-     <widget class="QPushButton" name="pushButton_jugo">
-      <property name="text">
-       <string>Jugos</string>
       </property>
      </widget>
     </item>

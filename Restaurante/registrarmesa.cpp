@@ -215,11 +215,237 @@ void RegistrarMesa::on_pushButton_postres_clicked()
     }
 }
 
-void RegistrarMesa::on_pushButton_platos_clicked()
-{
 
+
+void RegistrarMesa::on_pushButton_guard_clicked()
+{
+    escojer++;
+
+    ui->tableWidget_productos->clear();
+
+    QSqlQuery query;
+    query.prepare("SELECT nombres,precio,stock FROM Producto p INNER JOIN [192.168.0.102].Restaurante.dbo.Producto ipp ON p.enlace = ipp.enlace WHERE p.cod_catg = 5553");
+    if(query.exec()){
+        qDebug()<<"CONSULTA CORRECTA";
+        int fila = 0;
+        ui->tableWidget_productos->setColumnCount(3);
+        while(query.next()){
+            ui->tableWidget_productos->insertRow(fila);
+            ui->tableWidget_productos->setItem(fila,0,new QTableWidgetItem(query.value(0).toString()));
+            ui->tableWidget_productos->setItem(fila,1,new QTableWidgetItem(query.value(1).toString()));
+            ui->tableWidget_productos->setItem(fila,2,new QTableWidgetItem(query.value(2).toString()));
+            fila++;
+        }
+        QStringList cabeza = {"nombres","precio","stock"};
+        ui->tableWidget_productos->setHorizontalHeaderLabels(cabeza);
+        ui->tableWidget_productos->setEditTriggers(QAbstractItemView::NoEditTriggers);
+        ui->tableWidget_productos->setSelectionBehavior(QAbstractItemView::SelectRows);
+        ui->tableWidget_productos->verticalHeader()->setVisible(false);
+        ui->tableWidget_productos->setStyleSheet("QTableView {selection-background-color:#00afaf}");
+
+    }
+    else{
+        qDebug()<<"ERROR";
+    }
 }
 
+void RegistrarMesa::on_pushButton_platos_clicked()
+{
+    escojer++;
+
+    ui->tableWidget_productos->clear();
+
+    QSqlQuery query;
+    query.prepare("SELECT nombres,precio,stock FROM Producto p INNER JOIN [192.168.0.102].Restaurante.dbo.Producto ipp ON p.enlace = ipp.enlace WHERE p.cod_catg = 5552");
+    if(query.exec()){
+        qDebug()<<"CONSULTA CORRECTA";
+        int fila = 0;
+        ui->tableWidget_productos->setColumnCount(3);
+        while(query.next()){
+            ui->tableWidget_productos->insertRow(fila);
+            ui->tableWidget_productos->setItem(fila,0,new QTableWidgetItem(query.value(0).toString()));
+            ui->tableWidget_productos->setItem(fila,1,new QTableWidgetItem(query.value(1).toString()));
+            ui->tableWidget_productos->setItem(fila,2,new QTableWidgetItem(query.value(2).toString()));
+            fila++;
+        }
+        QStringList cabeza = {"nombres","precio","stock"};
+        ui->tableWidget_productos->setHorizontalHeaderLabels(cabeza);
+        ui->tableWidget_productos->setEditTriggers(QAbstractItemView::NoEditTriggers);
+        ui->tableWidget_productos->setSelectionBehavior(QAbstractItemView::SelectRows);
+        ui->tableWidget_productos->verticalHeader()->setVisible(false);
+        ui->tableWidget_productos->setStyleSheet("QTableView {selection-background-color:#00afaf}");
+
+    }
+    else{
+        qDebug()<<"ERROR";
+    }
+}
+
+
+void RegistrarMesa::on_pushButton_calientes_clicked()
+{
+    escojer++;
+
+    ui->tableWidget_productos->clear();
+
+    QSqlQuery query;
+    query.prepare("SELECT nombres,precio,stock FROM Producto p INNER JOIN [192.168.0.102].Restaurante.dbo.Producto ipp ON p.enlace = ipp.enlace WHERE p.cod_catg = 55510");
+    if(query.exec()){
+        qDebug()<<"CONSULTA CORRECTA";
+        int fila = 0;
+        ui->tableWidget_productos->setColumnCount(3);
+        while(query.next()){
+            ui->tableWidget_productos->insertRow(fila);
+            ui->tableWidget_productos->setItem(fila,0,new QTableWidgetItem(query.value(0).toString()));
+            ui->tableWidget_productos->setItem(fila,1,new QTableWidgetItem(query.value(1).toString()));
+            ui->tableWidget_productos->setItem(fila,2,new QTableWidgetItem(query.value(2).toString()));
+            fila++;
+        }
+        QStringList cabeza = {"nombres","precio","stock"};
+        ui->tableWidget_productos->setHorizontalHeaderLabels(cabeza);
+        ui->tableWidget_productos->setEditTriggers(QAbstractItemView::NoEditTriggers);
+        ui->tableWidget_productos->setSelectionBehavior(QAbstractItemView::SelectRows);
+        ui->tableWidget_productos->verticalHeader()->setVisible(false);
+        ui->tableWidget_productos->setStyleSheet("QTableView {selection-background-color:#00afaf}");
+
+    }
+    else{
+        qDebug()<<"ERROR";
+    }
+}
+void RegistrarMesa::on_pushButton_sand_clicked()
+{
+    escojer++;
+
+    ui->tableWidget_productos->clear();
+
+    QSqlQuery query;
+    query.prepare("SELECT nombres,precio,stock FROM Producto p INNER JOIN [192.168.0.102].Restaurante.dbo.Producto ipp ON p.enlace = ipp.enlace WHERE p.cod_catg = 5556");
+    if(query.exec()){
+        qDebug()<<"CONSULTA CORRECTA";
+        int fila = 0;
+        ui->tableWidget_productos->setColumnCount(3);
+        while(query.next()){
+            ui->tableWidget_productos->insertRow(fila);
+            ui->tableWidget_productos->setItem(fila,0,new QTableWidgetItem(query.value(0).toString()));
+            ui->tableWidget_productos->setItem(fila,1,new QTableWidgetItem(query.value(1).toString()));
+            ui->tableWidget_productos->setItem(fila,2,new QTableWidgetItem(query.value(2).toString()));
+            fila++;
+        }
+        QStringList cabeza = {"nombres","precio","stock"};
+        ui->tableWidget_productos->setHorizontalHeaderLabels(cabeza);
+        ui->tableWidget_productos->setEditTriggers(QAbstractItemView::NoEditTriggers);
+        ui->tableWidget_productos->setSelectionBehavior(QAbstractItemView::SelectRows);
+        ui->tableWidget_productos->verticalHeader()->setVisible(false);
+        ui->tableWidget_productos->setStyleSheet("QTableView {selection-background-color:#00afaf}");
+
+    }
+    else{
+        qDebug()<<"ERROR";
+    }
+}
+
+
+
+void RegistrarMesa::on_pushButton_sopas_clicked()
+{
+    escojer++;
+
+    ui->tableWidget_productos->clear();
+
+    QSqlQuery query;
+    query.prepare("SELECT nombres,precio,stock FROM Producto p INNER JOIN [192.168.0.102].Restaurante.dbo.Producto ipp ON p.enlace = ipp.enlace WHERE p.cod_catg = 5559");
+    if(query.exec()){
+        qDebug()<<"CONSULTA CORRECTA";
+        int fila = 0;
+        ui->tableWidget_productos->setColumnCount(3);
+        while(query.next()){
+            ui->tableWidget_productos->insertRow(fila);
+            ui->tableWidget_productos->setItem(fila,0,new QTableWidgetItem(query.value(0).toString()));
+            ui->tableWidget_productos->setItem(fila,1,new QTableWidgetItem(query.value(1).toString()));
+            ui->tableWidget_productos->setItem(fila,2,new QTableWidgetItem(query.value(2).toString()));
+            fila++;
+        }
+        QStringList cabeza = {"nombres","precio","stock"};
+        ui->tableWidget_productos->setHorizontalHeaderLabels(cabeza);
+        ui->tableWidget_productos->setEditTriggers(QAbstractItemView::NoEditTriggers);
+        ui->tableWidget_productos->setSelectionBehavior(QAbstractItemView::SelectRows);
+        ui->tableWidget_productos->verticalHeader()->setVisible(false);
+        ui->tableWidget_productos->setStyleSheet("QTableView {selection-background-color:#00afaf}");
+
+    }
+    else{
+        qDebug()<<"ERROR";
+    }
+}
+
+
+void RegistrarMesa::on_pushButton_combo_clicked()
+{
+    escojer++;
+
+    ui->tableWidget_productos->clear();
+
+    QSqlQuery query;
+    query.prepare("SELECT nombres,precio,stock FROM Producto p INNER JOIN [192.168.0.102].Restaurante.dbo.Producto ipp ON p.enlace = ipp.enlace WHERE p.cod_catg = 55512");
+    if(query.exec()){
+        qDebug()<<"CONSULTA CORRECTA";
+        int fila = 0;
+        ui->tableWidget_productos->setColumnCount(3);
+        while(query.next()){
+            ui->tableWidget_productos->insertRow(fila);
+            ui->tableWidget_productos->setItem(fila,0,new QTableWidgetItem(query.value(0).toString()));
+            ui->tableWidget_productos->setItem(fila,1,new QTableWidgetItem(query.value(1).toString()));
+            ui->tableWidget_productos->setItem(fila,2,new QTableWidgetItem(query.value(2).toString()));
+            fila++;
+        }
+        QStringList cabeza = {"nombres","precio","stock"};
+        ui->tableWidget_productos->setHorizontalHeaderLabels(cabeza);
+        ui->tableWidget_productos->setEditTriggers(QAbstractItemView::NoEditTriggers);
+        ui->tableWidget_productos->setSelectionBehavior(QAbstractItemView::SelectRows);
+        ui->tableWidget_productos->verticalHeader()->setVisible(false);
+        ui->tableWidget_productos->setStyleSheet("QTableView {selection-background-color:#00afaf}");
+
+    }
+    else{
+        qDebug()<<"ERROR";
+    }
+}
+
+
+
+
+void RegistrarMesa::on_pushButton_cocteles_clicked()
+{
+    escojer++;
+
+    ui->tableWidget_productos->clear();
+
+    QSqlQuery query;
+    query.prepare("SELECT nombres,precio,stock FROM Producto p INNER JOIN [192.168.0.102].Restaurante.dbo.Producto ipp ON p.enlace = ipp.enlace WHERE p.cod_catg = 5551");
+    if(query.exec()){
+        qDebug()<<"CONSULTA CORRECTA";
+        int fila = 0;
+        ui->tableWidget_productos->setColumnCount(3);
+        while(query.next()){
+            ui->tableWidget_productos->insertRow(fila);
+            ui->tableWidget_productos->setItem(fila,0,new QTableWidgetItem(query.value(0).toString()));
+            ui->tableWidget_productos->setItem(fila,1,new QTableWidgetItem(query.value(1).toString()));
+            ui->tableWidget_productos->setItem(fila,2,new QTableWidgetItem(query.value(2).toString()));
+            fila++;
+        }
+        QStringList cabeza = {"nombres","precio","stock"};
+        ui->tableWidget_productos->setHorizontalHeaderLabels(cabeza);
+        ui->tableWidget_productos->setEditTriggers(QAbstractItemView::NoEditTriggers);
+        ui->tableWidget_productos->setSelectionBehavior(QAbstractItemView::SelectRows);
+        ui->tableWidget_productos->verticalHeader()->setVisible(false);
+        ui->tableWidget_productos->setStyleSheet("QTableView {selection-background-color:#00afaf}");
+
+    }
+    else{
+        qDebug()<<"ERROR";
+    }
+}
 
 void RegistrarMesa::mostrarpedidos(QString nombre,QString precio)
 {
@@ -249,6 +475,7 @@ void RegistrarMesa::mostrarpedidos(QString nombre,QString precio)
     //suma para el conteo
     //Saldo();
 }
+
 
 
 void RegistrarMesa::on_pushButton_escojer_clicked()
@@ -416,6 +643,5 @@ void RegistrarMesa::esconder()
     this->setVisible(true);
     ventana->setVisible(false);
 }
-
 
 
