@@ -81,16 +81,6 @@ background-color: rgb(0, 255, 255);</string>
     </item>
    </layout>
   </widget>
-  <widget class="QTableWidget" name="tableWidget">
-   <property name="geometry">
-    <rect>
-     <x>0</x>
-     <y>0</y>
-     <width>21</width>
-     <height>21</height>
-    </rect>
-   </property>
-  </widget>
  </widget>
  <resources/>
  <connections/>

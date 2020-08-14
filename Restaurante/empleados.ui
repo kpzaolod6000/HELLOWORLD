@@ -62,16 +62,6 @@
       </property>
      </widget>
     </item>
-    <item>
-     <widget class="QPushButton" name="pushButton_cajero_2">
-      <property name="styleSheet">
-       <string notr="true">background:rgb(255, 255, 0)</string>
-      </property>
-      <property name="text">
-       <string>Cajero</string>
-      </property>
-     </widget>
-    </item>
    </layout>
   </widget>
   <widget class="QPushButton" name="pushButton_reserva">

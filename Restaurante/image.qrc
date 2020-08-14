@@ -1,6 +1,6 @@
 <RCC>
     <qresource prefix="/new/prefix1"/>
-    <qresource prefix="/resta" lang="resta"/>
+    <qresource lang="resta" prefix="/resta"/>
     <qresource prefix="/">
         <file>../image/ppt_slide1.jpg</file>
         <file>../image/elegante.jpg</file>
@@ -9,6 +9,9 @@
         <file>../image/105999616_261599721599241_8638277958334433844_n.jpg</file>
         <file>../image/107525323_282495186394929_5911216239822423774_n.jpg</file>
         <file>../image/116133932_1972826549507920_1532840104564983649_n.jpg</file>
-        <file>../image/rest.jpg</file>
+        <file>../image/38216558_m-e1487706381778-847x445.jpg</file>
+        <file>../image/52936804-fajitas-o-tortillas-mexicanas-alimentos-fondo-frontera-con-el-espacio-para-el-texto-o-la-receta-sobr.jpg</file>
+        <file>../image/bf0bb9f7716c4707c39393503ce005f6.jpg</file>
+        <file>../image/comida-italiana-ingredientes_1220-4676.jpg</file>
     </qresource>
 </RCC>

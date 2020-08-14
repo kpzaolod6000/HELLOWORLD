@@ -207,7 +207,7 @@ void MesaSucursal::on_pushButton_mesa3_clicked()
     QStringList cod_mesa;
 
     QSqlQuery query;
-    query.prepare("SET XACT_ABORT ON; SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED; SELECT * FROM [192.168.0.103].Restaurante.dbo.Mesas");
+    query.prepare("SET XACT_ABORT ON; SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED; SELECT * FROM [192.168.0.102].Restaurante.dbo.Mesas");
     query.exec();
     while(query.next()){
         cod_mesa << query.value(0).toByteArray().constData();
@@ -301,7 +301,7 @@ void MesaSucursal::on_pushButton_mesa4_clicked()
     QStringList cod_mesa;
 
     QSqlQuery query;
-    query.prepare("SET XACT_ABORT ON; SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED; SELECT * FROM [192.168.0.103].Restaurante.dbo.Mesas");
+    query.prepare("SET XACT_ABORT ON; SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED; SELECT * FROM [192.168.0.102].Restaurante.dbo.Mesas");
     query.exec();
     while(query.next()){
         cod_mesa << query.value(0).toByteArray().constData();

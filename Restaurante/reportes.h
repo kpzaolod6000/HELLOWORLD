@@ -9,6 +9,7 @@
 #include <QDebug>
 #include <QMessageBox>
 #include <QStringList>
+#include <QTableWidget>
 
 namespace Ui {
 class Reportes;

@@ -18,7 +18,7 @@ void Reportes::on_pushButton_cliente_clicked()
     QTableWidget *table = new QTableWidget(0,0);
 
     QSqlQuery query;
-    QStringList headers = { "Codigo", "Nombre", "Apellido Paterno", "Apellido Materno","Direccion","Telefonos,Lugar"};
+    QStringList headers = { "Codigo", "Nombre", "Apellido Paterno", "Apellido Materno","Direccion","Telefonos","Lugar"};
 
     //table->clear();
     query.prepare("SELECT * FROM Persona p INNER JOIN Clientes c ON p.codigo = c.codigo");
@@ -52,7 +52,7 @@ void Reportes::on_pushButton_clisucursal_clicked()
     QTableWidget *table = new QTableWidget(0,0);
 
     QSqlQuery query;
-    QStringList headers = { "Codigo", "Nombre", "Apellido Paterno", "Apellido Materno","Direccion","Telefonos,Lugar"};
+    QStringList headers = { "Codigo", "Nombre", "Apellido Paterno", "Apellido Materno","Direccion","Telefonos","Lugar"};
 
     //table->clear();
     query.prepare("SELECT * FROM Persona p INNER JOIN Clientes c ON p.codigo = c.codigo UNION SELECT * FROM [192.168.0.102].Restaurante.dbo.Persona p INNER JOIN [192.168.0.102].Restaurante.dbo.Clientes c ON p.codigo = c.codigo");

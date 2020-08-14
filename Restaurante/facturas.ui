@@ -6,15 +6,15 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>788</width>
-    <height>555</height>
+    <width>839</width>
+    <height>451</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background: url(:/image/107525323_282495186394929_5911216239822423774_n.jpg);</string>
+   <string notr="true">background-image: url(:/image/38216558_m-e1487706381778-847x445.jpg);</string>
   </property>
   <widget class="QLabel" name="label_nombre">
    <property name="geometry">
@@ -85,7 +85,7 @@
     <rect>
      <x>120</x>
      <y>120</y>
-     <width>71</width>
+     <width>81</width>
      <height>16</height>
     </rect>
    </property>
@@ -93,7 +93,7 @@
     <string notr="true">background:rgb(255, 255, 255)</string>
    </property>
    <property name="text">
-    <string>TextLabel</string>
+    <string/>
    </property>
   </widget>
   <widget class="QLabel" name="label_hora">
@@ -101,7 +101,7 @@
     <rect>
      <x>520</x>
      <y>110</y>
-     <width>55</width>
+     <width>81</width>
      <height>16</height>
     </rect>
    </property>
@@ -109,14 +109,14 @@
     <string notr="true">background:rgb(255, 255, 255)</string>
    </property>
    <property name="text">
-    <string>TextLabel</string>
+    <string/>
    </property>
   </widget>
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
-     <x>570</x>
-     <y>360</y>
+     <x>590</x>
+     <y>250</y>
      <width>55</width>
      <height>16</height>
     </rect>
@@ -131,8 +131,8 @@
   <widget class="QLabel" name="label_saldp">
    <property name="geometry">
     <rect>
-     <x>670</x>
-     <y>360</y>
+     <x>690</x>
+     <y>250</y>
      <width>55</width>
      <height>16</height>
     </rect>
@@ -141,14 +141,14 @@
     <string notr="true">background:rgb(255, 255, 255)</string>
    </property>
    <property name="text">
-    <string>precio</string>
+    <string/>
    </property>
   </widget>
   <widget class="QLabel" name="label_impuesto">
    <property name="geometry">
     <rect>
-     <x>670</x>
-     <y>390</y>
+     <x>690</x>
+     <y>280</y>
      <width>55</width>
      <height>16</height>
     </rect>
@@ -157,14 +157,14 @@
     <string notr="true">background:rgb(255, 255, 255)</string>
    </property>
    <property name="text">
-    <string>TextLabel</string>
+    <string/>
    </property>
   </widget>
   <widget class="QLabel" name="label_7">
    <property name="geometry">
     <rect>
-     <x>570</x>
-     <y>390</y>
+     <x>590</x>
+     <y>280</y>
      <width>55</width>
      <height>16</height>
     </rect>
@@ -179,8 +179,8 @@
   <widget class="QLabel" name="label_8">
    <property name="geometry">
     <rect>
-     <x>570</x>
-     <y>420</y>
+     <x>590</x>
+     <y>310</y>
      <width>71</width>
      <height>16</height>
     </rect>
@@ -195,8 +195,8 @@
   <widget class="QLabel" name="label_descuento">
    <property name="geometry">
     <rect>
-     <x>670</x>
-     <y>420</y>
+     <x>690</x>
+     <y>310</y>
      <width>55</width>
      <height>16</height>
     </rect>
@@ -205,14 +205,14 @@
     <string notr="true">background:rgb(255, 255, 255)</string>
    </property>
    <property name="text">
-    <string>TextLabel</string>
+    <string/>
    </property>
   </widget>
   <widget class="QLabel" name="label_10">
    <property name="geometry">
     <rect>
-     <x>570</x>
-     <y>450</y>
+     <x>590</x>
+     <y>340</y>
      <width>55</width>
      <height>16</height>
     </rect>
@@ -227,8 +227,8 @@
   <widget class="QLabel" name="label_total">
    <property name="geometry">
     <rect>
-     <x>670</x>
-     <y>450</y>
+     <x>690</x>
+     <y>340</y>
      <width>55</width>
      <height>16</height>
     </rect>
@@ -237,14 +237,14 @@
     <string notr="true">background:rgb(255, 255, 255)</string>
    </property>
    <property name="text">
-    <string>total</string>
+    <string/>
    </property>
   </widget>
   <widget class="QPushButton" name="pushButton_cancelar">
    <property name="geometry">
     <rect>
-     <x>670</x>
-     <y>510</y>
+     <x>690</x>
+     <y>400</y>
      <width>93</width>
      <height>28</height>
     </rect>
@@ -260,8 +260,8 @@
    <property name="geometry">
     <rect>
      <x>50</x>
-     <y>170</y>
-     <width>531</width>
+     <y>150</y>
+     <width>501</width>
      <height>181</height>
     </rect>
    </property>
@@ -270,7 +270,7 @@
    </property>
    <column>
     <property name="text">
-     <string>Lineas</string>
+     <string>Nro Pedidos</string>
     </property>
    </column>
    <column>
@@ -280,12 +280,12 @@
    </column>
    <column>
     <property name="text">
-     <string>precio</string>
+     <string>Precio</string>
     </property>
    </column>
    <column>
     <property name="text">
-     <string>cantidad</string>
+     <string>Cantidad</string>
     </property>
    </column>
   </widget>
