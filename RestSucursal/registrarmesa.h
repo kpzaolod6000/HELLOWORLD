@@ -54,6 +54,18 @@ private slots:
 
     void on_pushButton_postres_clicked();
 
+    void on_pushButton_sand_clicked();
+
+    void on_pushButton_guard_clicked();
+
+    void on_pushButton_sopas_clicked();
+
+    void on_pushButton_calientes_clicked();
+
+    void on_pushButton_cocteles_clicked();
+
+    void on_pushButton_combo_clicked();
+
 private:
     Ui::RegistrarMesa *ui;
     RegistrarCliente* ventana;

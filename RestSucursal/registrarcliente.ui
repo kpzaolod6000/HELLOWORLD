@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>793</width>
-    <height>520</height>
+    <width>713</width>
+    <height>394</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -16,11 +16,14 @@
   <widget class="QLabel" name="label_6">
    <property name="geometry">
     <rect>
-     <x>290</x>
-     <y>330</y>
+     <x>240</x>
+     <y>340</y>
      <width>55</width>
      <height>16</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255);</string>
    </property>
    <property name="text">
     <string>Lugar</string>
@@ -29,11 +32,14 @@
   <widget class="QLabel" name="label_lugar">
    <property name="geometry">
     <rect>
-     <x>430</x>
-     <y>330</y>
-     <width>91</width>
+     <x>340</x>
+     <y>340</y>
+     <width>131</width>
      <height>21</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255);</string>
    </property>
    <property name="text">
     <string/>
@@ -42,11 +48,14 @@
   <widget class="QPushButton" name="pushButton_guardar">
    <property name="geometry">
     <rect>
-     <x>690</x>
-     <y>470</y>
+     <x>580</x>
+     <y>350</y>
      <width>93</width>
      <height>28</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 0);</string>
    </property>
    <property name="text">
     <string>Siguiente</string>
@@ -55,11 +64,14 @@
   <widget class="QPushButton" name="pushButton_2">
    <property name="geometry">
     <rect>
-     <x>10</x>
-     <y>480</y>
+     <x>20</x>
+     <y>360</y>
      <width>93</width>
      <height>28</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 0, 0);</string>
    </property>
    <property name="text">
     <string>atras</string>
@@ -68,11 +80,14 @@
   <widget class="QLabel" name="label_7">
    <property name="geometry">
     <rect>
-     <x>380</x>
-     <y>30</y>
-     <width>171</width>
+     <x>350</x>
+     <y>40</y>
+     <width>121</width>
      <height>16</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255);</string>
    </property>
    <property name="text">
     <string>REGISTRO DEL CLIENTE</string>
@@ -81,35 +96,8 @@
   <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
-     <x>390</x>
-     <y>60</y>
-     <width>139</width>
-     <height>251</height>
-    </rect>
-   </property>
-   <layout class="QVBoxLayout" name="verticalLayout">
-    <item>
-     <widget class="QLineEdit" name="lineEdit_apelpaterno"/>
-    </item>
-    <item>
-     <widget class="QLineEdit" name="lineEdit_nombre"/>
-    </item>
-    <item>
-     <widget class="QLineEdit" name="lineEdit_apel_materno"/>
-    </item>
-    <item>
-     <widget class="QLineEdit" name="lineEdit_direccion"/>
-    </item>
-    <item>
-     <widget class="QLineEdit" name="lineEdit_telefono"/>
-    </item>
-   </layout>
-  </widget>
-  <widget class="QWidget" name="layoutWidget">
-   <property name="geometry">
-    <rect>
-     <x>280</x>
-     <y>70</y>
+     <x>230</x>
+     <y>80</y>
      <width>98</width>
      <height>231</height>
     </rect>
@@ -117,6 +105,9 @@
    <layout class="QVBoxLayout" name="verticalLayout_2">
     <item>
      <widget class="QLabel" name="label">
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(255, 255, 255);</string>
+      </property>
       <property name="text">
        <string>Nombre</string>
       </property>
@@ -124,6 +115,9 @@
     </item>
     <item>
      <widget class="QLabel" name="label_2">
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(255, 255, 255);</string>
+      </property>
       <property name="text">
        <string>Apellido Paterno</string>
       </property>
@@ -131,6 +125,9 @@
     </item>
     <item>
      <widget class="QLabel" name="label_3">
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(255, 255, 255);</string>
+      </property>
       <property name="text">
        <string>Apellido Materno</string>
       </property>
@@ -138,6 +135,9 @@
     </item>
     <item>
      <widget class="QLabel" name="label_4">
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(255, 255, 255);</string>
+      </property>
       <property name="text">
        <string>direccion</string>
       </property>
@@ -145,6 +145,9 @@
     </item>
     <item>
      <widget class="QLabel" name="label_5">
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(255, 255, 255);</string>
+      </property>
       <property name="text">
        <string>Telefonos</string>
       </property>
@@ -152,7 +155,106 @@
     </item>
    </layout>
   </widget>
+  <widget class="QLabel" name="label_8">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>721</width>
+     <height>401</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap resource="image.qrc">:/image/comida-italiana-ingredientes_1220-4676.jpg</pixmap>
+   </property>
+   <property name="scaledContents">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="lineEdit_apelpaterno">
+   <property name="geometry">
+    <rect>
+     <x>341</x>
+     <y>91</y>
+     <width>133</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255);</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="lineEdit_nombre">
+   <property name="geometry">
+    <rect>
+     <x>341</x>
+     <y>137</y>
+     <width>133</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255);</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="lineEdit_apel_materno">
+   <property name="geometry">
+    <rect>
+     <x>341</x>
+     <y>183</y>
+     <width>133</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255);</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="lineEdit_direccion">
+   <property name="geometry">
+    <rect>
+     <x>341</x>
+     <y>229</y>
+     <width>133</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255);</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="lineEdit_telefono">
+   <property name="geometry">
+    <rect>
+     <x>341</x>
+     <y>275</y>
+     <width>133</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255);</string>
+   </property>
+  </widget>
+  <zorder>label_8</zorder>
+  <zorder>label_6</zorder>
+  <zorder>pushButton_guardar</zorder>
+  <zorder>pushButton_2</zorder>
+  <zorder>label_7</zorder>
+  <zorder>layoutWidget</zorder>
+  <zorder>layoutWidget</zorder>
+  <zorder>lineEdit_apelpaterno</zorder>
+  <zorder>lineEdit_nombre</zorder>
+  <zorder>lineEdit_apel_materno</zorder>
+  <zorder>lineEdit_direccion</zorder>
+  <zorder>lineEdit_telefono</zorder>
+  <zorder>label_lugar</zorder>
  </widget>
- <resources/>
+ <resources>
+  <include location="image.qrc"/>
+ </resources>
  <connections/>
 </ui>

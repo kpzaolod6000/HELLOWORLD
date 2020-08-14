@@ -6,21 +6,27 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>788</width>
-    <height>555</height>
+    <width>663</width>
+    <height>410</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
   <widget class="QLabel" name="label_nombre">
    <property name="geometry">
     <rect>
-     <x>130</x>
+     <x>100</x>
      <y>70</y>
-     <width>591</width>
+     <width>321</width>
      <height>31</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255);</string>
    </property>
    <property name="text">
     <string/>
@@ -35,8 +41,11 @@
      <height>16</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255);</string>
+   </property>
    <property name="text">
-    <string>Nombre_:</string>
+    <string>Nombre :</string>
    </property>
   </widget>
   <widget class="QLabel" name="label_3">
@@ -47,6 +56,9 @@
      <width>55</width>
      <height>16</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255);</string>
    </property>
    <property name="text">
     <string>Fecha:</string>
@@ -61,6 +73,9 @@
      <height>16</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255);</string>
+   </property>
    <property name="text">
     <string>Hora:</string>
    </property>
@@ -70,12 +85,15 @@
     <rect>
      <x>120</x>
      <y>120</y>
-     <width>55</width>
+     <width>101</width>
      <height>16</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255);</string>
+   </property>
    <property name="text">
-    <string>TextLabel</string>
+    <string/>
    </property>
   </widget>
   <widget class="QLabel" name="label_hora">
@@ -83,22 +101,28 @@
     <rect>
      <x>520</x>
      <y>110</y>
-     <width>55</width>
+     <width>91</width>
      <height>16</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255);</string>
+   </property>
    <property name="text">
-    <string>TextLabel</string>
+    <string/>
    </property>
   </widget>
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
-     <x>570</x>
-     <y>360</y>
+     <x>480</x>
+     <y>240</y>
      <width>55</width>
      <height>16</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255);</string>
    </property>
    <property name="text">
     <string>Saldo:</string>
@@ -107,37 +131,46 @@
   <widget class="QLabel" name="label_saldp">
    <property name="geometry">
     <rect>
-     <x>670</x>
-     <y>360</y>
+     <x>580</x>
+     <y>240</y>
      <width>55</width>
      <height>16</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255);</string>
+   </property>
    <property name="text">
-    <string>precio</string>
+    <string/>
    </property>
   </widget>
   <widget class="QLabel" name="label_impuesto">
    <property name="geometry">
     <rect>
-     <x>670</x>
-     <y>390</y>
+     <x>580</x>
+     <y>270</y>
      <width>55</width>
      <height>16</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255);</string>
+   </property>
    <property name="text">
-    <string>TextLabel</string>
+    <string/>
    </property>
   </widget>
   <widget class="QLabel" name="label_7">
    <property name="geometry">
     <rect>
-     <x>570</x>
-     <y>390</y>
+     <x>480</x>
+     <y>270</y>
      <width>55</width>
      <height>16</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255);</string>
    </property>
    <property name="text">
     <string>impuesto:</string>
@@ -146,11 +179,14 @@
   <widget class="QLabel" name="label_8">
    <property name="geometry">
     <rect>
-     <x>570</x>
-     <y>420</y>
+     <x>480</x>
+     <y>300</y>
      <width>71</width>
      <height>16</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255);</string>
    </property>
    <property name="text">
     <string>descuento:</string>
@@ -159,24 +195,30 @@
   <widget class="QLabel" name="label_descuento">
    <property name="geometry">
     <rect>
-     <x>670</x>
-     <y>420</y>
+     <x>580</x>
+     <y>300</y>
      <width>55</width>
      <height>16</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255);</string>
+   </property>
    <property name="text">
-    <string>TextLabel</string>
+    <string/>
    </property>
   </widget>
   <widget class="QLabel" name="label_10">
    <property name="geometry">
     <rect>
-     <x>570</x>
-     <y>450</y>
+     <x>480</x>
+     <y>330</y>
      <width>55</width>
      <height>16</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255);</string>
    </property>
    <property name="text">
     <string>TOTAL:</string>
@@ -185,24 +227,31 @@
   <widget class="QLabel" name="label_total">
    <property name="geometry">
     <rect>
-     <x>670</x>
-     <y>450</y>
+     <x>580</x>
+     <y>330</y>
      <width>55</width>
      <height>16</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255);</string>
+   </property>
    <property name="text">
-    <string>total</string>
+    <string/>
    </property>
   </widget>
   <widget class="QPushButton" name="pushButton_cancelar">
    <property name="geometry">
     <rect>
-     <x>670</x>
-     <y>510</y>
+     <x>550</x>
+     <y>370</y>
      <width>93</width>
      <height>28</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255);
+background-color: rgb(0, 255, 255);</string>
    </property>
    <property name="text">
     <string>PAGAR</string>
@@ -213,13 +262,16 @@
     <rect>
      <x>50</x>
      <y>170</y>
-     <width>531</width>
+     <width>401</width>
      <height>181</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: qconicalgradient(cx:0.5, cy:0.5, angle:0, stop:0 rgba(35, 40, 3, 255), stop:0.16 rgba(136, 106, 22, 255), stop:0.225 rgba(166, 140, 41, 255), stop:0.285 rgba(204, 181, 74, 255), stop:0.345 rgba(235, 219, 102, 255), stop:0.415 rgba(245, 236, 112, 255), stop:0.52 rgba(209, 190, 76, 255), stop:0.57 rgba(187, 156, 51, 255), stop:0.635 rgba(168, 142, 42, 255), stop:0.695 rgba(202, 174, 68, 255), stop:0.75 rgba(218, 202, 86, 255), stop:0.815 rgba(208, 187, 73, 255), stop:0.88 rgba(187, 156, 51, 255), stop:0.935 rgba(137, 108, 26, 255), stop:1 rgba(35, 40, 3, 255));</string>
+   </property>
    <column>
     <property name="text">
-     <string>Lineas</string>
+     <string>Nro Pedidos</string>
     </property>
    </column>
    <column>
@@ -238,6 +290,42 @@
     </property>
    </column>
   </widget>
+  <widget class="QFrame" name="frame">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>671</width>
+     <height>411</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-image: url(:/image/38216558_m-e1487706381778-847x445.jpg);</string>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::StyledPanel</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+  </widget>
+  <zorder>frame</zorder>
+  <zorder>label_2</zorder>
+  <zorder>label_nombre</zorder>
+  <zorder>label_3</zorder>
+  <zorder>label_fecha</zorder>
+  <zorder>label_4</zorder>
+  <zorder>label_hora</zorder>
+  <zorder>tableWidget_factura</zorder>
+  <zorder>label</zorder>
+  <zorder>label_saldp</zorder>
+  <zorder>label_7</zorder>
+  <zorder>label_8</zorder>
+  <zorder>label_10</zorder>
+  <zorder>label_impuesto</zorder>
+  <zorder>label_descuento</zorder>
+  <zorder>label_total</zorder>
+  <zorder>pushButton_cancelar</zorder>
  </widget>
  <resources/>
  <connections/>

@@ -9,6 +9,7 @@
 #include <QDebug>
 #include <QMessageBox>
 #include <QStringList>
+#include <QTableWidget>
 
 namespace Ui {
 class Reportes;
@@ -28,6 +29,11 @@ private slots:
     void on_pushButton_clisucursal_clicked();
 
     void on_pushButton_back_clicked();
+
+
+    void on_pushButton_pedidos_clicked();
+
+    void on_pushButton_pedidos_2_clicked();
 
 private:
     Ui::Reportes *ui;

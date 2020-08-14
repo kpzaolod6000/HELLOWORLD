@@ -6,118 +6,192 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>982</width>
-    <height>422</height>
+    <width>718</width>
+    <height>425</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
   <widget class="QPushButton" name="pushButton_back">
    <property name="geometry">
     <rect>
-     <x>20</x>
-     <y>380</y>
+     <x>30</x>
+     <y>370</y>
      <width>93</width>
      <height>28</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 0, 0);</string>
    </property>
    <property name="text">
     <string>atras</string>
    </property>
   </widget>
-  <widget class="QWidget" name="">
+  <widget class="QFrame" name="frame">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>721</width>
+     <height>431</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-image: url(:/image/116133932_1972826549507920_1532840104564983649_n.jpg);</string>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::StyledPanel</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_mesa2">
+   <property name="geometry">
+    <rect>
+     <x>440</x>
+     <y>171</y>
+     <width>111</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(0, 170, 255);</string>
+   </property>
+   <property name="text">
+    <string>Mesa 2</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_mesa1">
    <property name="geometry">
     <rect>
      <x>320</x>
-     <y>290</y>
-     <width>351</width>
-     <height>25</height>
+     <y>171</y>
+     <width>111</width>
+     <height>23</height>
     </rect>
    </property>
-   <layout class="QHBoxLayout" name="horizontalLayout">
-    <item>
-     <widget class="QPushButton" name="pushButton_mesa6">
-      <property name="text">
-       <string>Mesa 6</string>
-      </property>
-     </widget>
-    </item>
-    <item>
-     <widget class="QPushButton" name="pushButton_mesa7">
-      <property name="text">
-       <string>Mesa 7</string>
-      </property>
-     </widget>
-    </item>
-    <item>
-     <widget class="QPushButton" name="pushButton_mesa8">
-      <property name="text">
-       <string>Mesa 8</string>
-      </property>
-     </widget>
-    </item>
-   </layout>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(0, 170, 255);</string>
+   </property>
+   <property name="text">
+    <string>Mesa 1 </string>
+   </property>
   </widget>
-  <widget class="QWidget" name="">
+  <widget class="QPushButton" name="pushButton_mesa5">
    <property name="geometry">
     <rect>
-     <x>320</x>
-     <y>230</y>
-     <width>351</width>
-     <height>25</height>
+     <x>440</x>
+     <y>231</y>
+     <width>111</width>
+     <height>23</height>
     </rect>
    </property>
-   <layout class="QHBoxLayout" name="horizontalLayout_2">
-    <item>
-     <widget class="QPushButton" name="pushButton_mesa3">
-      <property name="text">
-       <string>Mesa 3 </string>
-      </property>
-     </widget>
-    </item>
-    <item>
-     <widget class="QPushButton" name="pushButton_mesa4">
-      <property name="text">
-       <string>Mesa 4</string>
-      </property>
-     </widget>
-    </item>
-    <item>
-     <widget class="QPushButton" name="pushButton_mesa5">
-      <property name="text">
-       <string>Mesa 5</string>
-      </property>
-     </widget>
-    </item>
-   </layout>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(0, 170, 255);</string>
+   </property>
+   <property name="text">
+    <string>Mesa 5</string>
+   </property>
   </widget>
-  <widget class="QWidget" name="">
+  <widget class="QPushButton" name="pushButton_mesa4">
    <property name="geometry">
     <rect>
-     <x>450</x>
-     <y>170</y>
-     <width>221</width>
-     <height>25</height>
+     <x>319</x>
+     <y>231</y>
+     <width>111</width>
+     <height>23</height>
     </rect>
    </property>
-   <layout class="QHBoxLayout" name="horizontalLayout_3">
-    <item>
-     <widget class="QPushButton" name="pushButton_mesa1">
-      <property name="text">
-       <string>Mesa 1 </string>
-      </property>
-     </widget>
-    </item>
-    <item>
-     <widget class="QPushButton" name="pushButton_mesa2">
-      <property name="text">
-       <string>Mesa 2</string>
-      </property>
-     </widget>
-    </item>
-   </layout>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(0, 170, 255);</string>
+   </property>
+   <property name="text">
+    <string>Mesa 4</string>
+   </property>
   </widget>
+  <widget class="QPushButton" name="pushButton_mesa3">
+   <property name="geometry">
+    <rect>
+     <x>201</x>
+     <y>231</y>
+     <width>111</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(0, 170, 255);</string>
+   </property>
+   <property name="text">
+    <string>Mesa 3 </string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_mesa8">
+   <property name="geometry">
+    <rect>
+     <x>438</x>
+     <y>291</y>
+     <width>111</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(0, 170, 255);</string>
+   </property>
+   <property name="text">
+    <string>Mesa 8</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_mesa7">
+   <property name="geometry">
+    <rect>
+     <x>319</x>
+     <y>291</y>
+     <width>111</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(0, 170, 255);</string>
+   </property>
+   <property name="text">
+    <string>Mesa 7</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_mesa6">
+   <property name="geometry">
+    <rect>
+     <x>201</x>
+     <y>291</y>
+     <width>111</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(0, 170, 255);</string>
+   </property>
+   <property name="text">
+    <string>Mesa 6</string>
+   </property>
+  </widget>
+  <zorder>frame</zorder>
+  <zorder>layoutWidget</zorder>
+  <zorder>layoutWidget</zorder>
+  <zorder>layoutWidget</zorder>
+  <zorder>pushButton_back</zorder>
+  <zorder>pushButton_mesa2</zorder>
+  <zorder>pushButton_mesa1</zorder>
+  <zorder>pushButton_mesa5</zorder>
+  <zorder>pushButton_mesa4</zorder>
+  <zorder>pushButton_mesa3</zorder>
+  <zorder>pushButton_mesa8</zorder>
+  <zorder>pushButton_mesa7</zorder>
+  <zorder>pushButton_mesa6</zorder>
  </widget>
  <resources/>
  <connections/>

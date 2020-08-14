@@ -27,14 +27,17 @@ void Facturas :: mostrar(){
     //ui->tableWidget_factura->clear();
     ui->tableWidget_factura->setColumnCount(4);
     double Saldo = 0;
+    int numero = 1;
 
     for(int i=0;i<this->nombre.size();i++){
        ui->tableWidget_factura->insertRow(i);
+       ui->tableWidget_factura->setItem(i,0,new QTableWidgetItem(QString::number(numero)));
        ui->tableWidget_factura->setItem(i,1,new QTableWidgetItem(nombre[i]));
        ui->tableWidget_factura->setItem(i,2,new QTableWidgetItem(precio[i]));
        ui->tableWidget_factura->setItem(i,3,new QTableWidgetItem(cantidad[i]));
        //recuperar
        Saldo = Saldo + ui->tableWidget_factura->item(i,2)->text().toDouble();
+       numero++;
     }
     ui->tableWidget_factura->setEditTriggers(QAbstractItemView::NoEditTriggers);
     ui->tableWidget_factura->setSelectionBehavior(QAbstractItemView::SelectRows);
