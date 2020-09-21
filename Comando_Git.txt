@@ -41,3 +41,17 @@ git checkout master
 
 git merge version_local
 
+git log --oneline --decorate --all --graph
+
+posteriormente se tags llamados v1.0.0 y v1.0.1
+
+git tag -a v1.0.0 cf2d3dc55c0e7c5cc058bf1ee4f9e7ff715fb829 -m "Version Incompleta"
+
+git tag -a v1.0.1 4824628fe31491c2ad6ee02e4cd086313aa6bc1b -m "Version Completa"
+
+git tag -l "*"  -> para verificar todos los tags
+git log -> para verificar las key de los commits
+
+git push origin --tags
+
+
