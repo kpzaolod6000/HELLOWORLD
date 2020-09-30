@@ -11,6 +11,7 @@ llamada Proyecto-BD
 Se uso primeramente el siguiente comando que contenia el README
 git clone https://github.com/kpzaolod6000/Proyecto-BD.git
 
+El proyecto se realizo poco a poco agreagando archivos al repositorio
 git add image
 
 git add Restaurante
@@ -21,13 +22,17 @@ git add elegante.jpg
 
 git add ppt_slide.jpg
 
+Despues se procedio a comfirmar los archivos para su envio
 git commit -m ""
 
+Tambien se tuvo que agregar la direccion de repositorio github
 git remote add origin https://github.com/kpzaolod6000/Proyecto-BD.git
 
+Se envian a la rama master del repositorio
 git push origin master
 
-se creo un  branch llamado verson_local
+se creo una rama llamado version_local en la cual se realizo los mismo procedimiento,
+como tambien clonar los archivos
 
 git branch version_local
 
@@ -60,3 +65,7 @@ git tag -l "*"  -> para verificar todos los tags
 git log -> para verificar las key de los commits
 
 git push origin --tags
+
+# Reporte de Defectos generado por SonarQube 
+
+
