@@ -68,4 +68,10 @@ git push origin --tags
 
 # Reporte de Defectos generado por SonarQube 
 
+El scanner no se dio ningun error a pesar de que el plugin sonar-cxx-plugin-2.0.0.2202 fue instalado
 
+https://github.com/kpzaolod6000/Proyecto-BD/blob/master/error1.png
+
+https://github.com/kpzaolod6000/Proyecto-BD/blob/master/error2.png
+
+https://github.com/kpzaolod6000/Proyecto-BD/blob/master/error.png
